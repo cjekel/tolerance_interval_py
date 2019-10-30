@@ -127,6 +127,7 @@ class HansonKoopmans(object):
             self.b = B + 1.
             self.un_conv = status
             self.count = count
+            # This should raise RuntimeError if not converged!
 
     def invalid_value(self, value, variable):
         err = str(value) + ' was not a valid value for ' + variable
