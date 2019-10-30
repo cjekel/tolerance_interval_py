@@ -1,11 +1,11 @@
 from distutils.core import setup
 setup(
     name='toleranceinterval',
-    version=open('tolinterval/VERSION').read().strip(),
+    version=open('toleranceinterval/VERSION').read().strip(),
     author='Charles Jekel',
     author_email='cjekel@gmail.com',
-    packages=['tolinterval'],
-    package_data={'tolinterval': ['VERSION']},
+    packages=['toleranceinterval'],
+    package_data={'toleranceinterval': ['VERSION']},
     url='https://github.com/cjekel/tolerance_interval_py',
     license='MIT License',
     description='Tolerance intervals in Python',
