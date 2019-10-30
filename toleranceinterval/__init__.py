@@ -1,4 +1,6 @@
-from .tolinterval import *  # noqa F401
+from .toleranceinterval import *  # noqa F401
+import .hk  # noqa F401
+import .checks  # noqa F401
 import os  # noqa F401
 
 # add rudimentary version tracking

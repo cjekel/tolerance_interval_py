@@ -1,6 +1,6 @@
 from distutils.core import setup
 setup(
-    name='tolinterval',
+    name='toleranceinterval',
     version=open('tolinterval/VERSION').read().strip(),
     author='Charles Jekel',
     author_email='cjekel@gmail.com',
