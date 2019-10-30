@@ -111,6 +111,7 @@ class HansonKoopmans(object):
         if pi_B_1 >= self.g:
             self.fall_back = True
             # raise ValueError('b = 1, defer to traditional methods...')
+            # raise RunTimeWarning?
         else:
             self.fall_back = False
             b_guess = self.vangel_approx(p=float(self.p))
