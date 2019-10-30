@@ -27,4 +27,5 @@ import numpy as np
 def numpy_array_sort(x):
     if isinstance(x, np.ndarray) is False:
         x = np.array(x)
-    return x.sort(), x.size()
+    x.sort()
+    return x, x.size

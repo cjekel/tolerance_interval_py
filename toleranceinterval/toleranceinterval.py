@@ -23,8 +23,8 @@
 
 import numpy as np
 from scipy.stats import binom, norm, nct
-from hk import HansonKoopmans
-from checks import numpy_array_sort
+from .hk import HansonKoopmans
+from .checks import numpy_array_sort
 
 
 def normal(x, p, g):
