@@ -27,7 +27,7 @@ from .hk import HansonKoopmans
 from .checks import numpy_array_sort
 
 
-def normal(x, p, g):
+def normal(x, p, g, one_side=True):
     r"""
     Compute tolerance interval using the normal distribution.
 
@@ -82,7 +82,7 @@ def normal(x, p, g):
         return x.mean() + (k*x.std(ddof=1))
 
 
-def non_parametric(x, p, g):
+def non_parametric(x, p, g, one_side=True):
     r"""
     Compute tolerance interval using the traditional non-parametric method.
 
@@ -134,10 +134,24 @@ def non_parametric(x, p, g):
     """
     x, n = numpy_array_sort(x)
     r = np.arange(0, n)
-    confidence_index = binom.sf(r, n, p)
+    if p < 0.5:
+        left_tail = True
+        confidence_index = binom.sf(r, n, p)
+    else:
+        left_tail = False
+        confidence_index = binom.cdf(r, n, p)
     boolean_index = confidence_index >= g
     if boolean_index.sum() > 0:
-        return x[np.max(np.where(boolean_index))]
+        if left_tail:
+            print('index', np.max(np.where(boolean_index)))
+            print(np.where(boolean_index))
+            print(boolean_index)
+            return x[np.max(np.where(boolean_index))]
+        else:
+            print('index', np.min(np.where(boolean_index)))
+            print(np.where(boolean_index))
+            print(boolean_index)
+            return x[np.min(np.where(boolean_index))]            
     else:
         return np.nan
 
