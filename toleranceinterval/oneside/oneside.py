@@ -23,17 +23,17 @@
 
 import numpy as np
 from scipy.stats import binom, norm, nct
-from .hk import HansonKoopmans
-from .checks import numpy_array_sort
+from ..hk import HansonKoopmans
+from ..checks import numpy_array, assert_2d_sort
 
 
-def normal(x, p, g, one_side=True):
+def normal(x, p, g):
     r"""
-    Compute tolerance interval using the normal distribution.
+    Compute one-side tolerance bound using the normal distribution.
 
     Computes the one-sided tolerance interval using the normal distribution.
     This follows the derivation in [1] to calculate the interval as a factor
-    of sample standard deviations away from the sample mean.
+    of sample standard deviations away from the sample mean. See also [2].
 
     Parameters
     ----------
@@ -55,36 +55,46 @@ def normal(x, p, g, one_side=True):
     .. [1] Young, D. S. (2010). tolerance: An R Package for Estimating
         Tolerance Intervals. Journal of Statistical Software; Vol 1, Issue 5
         (2010). Retrieved from http://dx.doi.org/10.18637/jss.v036.i05
+    .. [2] Montgomery, D. C., & Runger, G. C. (2018). Chapter 8. Statistical
+        Intervals for a Single Sample. In Applied Statistics and Probability
+        for Engineers, 7th Edition.
 
     Examples
     --------
-    Estimate the 10th percentile with 95% confidence of the following 100
-    random samples from a normal distribution.
+    Estimate the 10th percentile lower bound with 95% confidence of the
+    following 100 random samples from a normal distribution.
 
     >>> import numpy as np
-    >>> import toleranceinterval
+    >>> import toleranceinterval as ti
     >>> x = np.random.nomral(100)
-    >>> bound = toleranceinterval.normal(x, 0.1, 0.95)
+    >>> lb = ti.oneside.normal(x, 0.1, 0.95)
+
+    Estimate the 90th percentile upper bound with 95% confidence of the
+    following 100 random samples from a normal distribution.
+
+    >>> ub = ti.oneside.normal(x, 0.1, 0.95)
 
     """
-    x, n = numpy_array_sort(x)
+    x = numpy_array(x)
+    x = assert_2d_sort(x)
+    m, n = x.shape
     if p < 0.5:
         p = 1.0 - p
         minus = True
     else:
         minus = False
     zp = norm.ppf(p)
-    t = nct.ppf(1.0-g, df=n-1., nc=np.sqrt(n)*zp)
+    t = nct.ppf(g, df=n-1., nc=np.sqrt(n)*zp)
     k = t / np.sqrt(n)
     if minus:
-        return x.mean() - (k*x.std(ddof=1))
+        return x.mean(axis=1) - (k*x.std(axis=1, ddof=1))
     else:
-        return x.mean() + (k*x.std(ddof=1))
+        return x.mean(axis=1) + (k*x.std(axis=1, ddof=1))
 
 
-def non_parametric(x, p, g, one_side=True):
+def non_parametric(x, p, g):
     r"""
-    Compute tolerance interval using the traditional non-parametric method.
+    Compute one-side tolerance bound using traditional non-parametric method.
 
     Computes a tolerance interval for any percentile, confidence level, and
     number of samples using the traditional non-parametric method [1] [2].
@@ -123,16 +133,23 @@ def non_parametric(x, p, g, one_side=True):
 
     Examples
     --------
-    Estimate the 10th percentile with 95% confidence of the following 300
-    random samples from a normal distribution.
+    Estimate the 10th percentile bound with 95% confidence of the
+    following 300 random samples from a normal distribution.
 
     >>> import numpy as np
-    >>> import toleranceinterval
+    >>> import toleranceinterval as ti
     >>> x = np.random.random(300)
-    >>> bound = toleranceinterval.normal(x, 0.1, 0.95)
+    >>> bound = ti.oneside.normal(x, 0.1, 0.95)
+
+    Estimate the 90th percentile bound with 95% confidence of the
+    following 300 random samples from a normal distribution.
+
+    >>> bound = ti.oneside.normal(x, 0.9, 0.95)
 
     """
-    x, n = numpy_array_sort(x)
+    x = numpy_array(x)
+    x = assert_2d_sort(x)
+    m, n = x.shape
     r = np.arange(0, n)
     if p < 0.5:
         left_tail = True
@@ -144,16 +161,16 @@ def non_parametric(x, p, g, one_side=True):
     if boolean_index.sum() > 0:
         if left_tail:
             print('index', np.max(np.where(boolean_index)))
-            print(np.where(boolean_index))
-            print(boolean_index)
-            return x[np.max(np.where(boolean_index))]
+            # print(np.where(boolean_index))
+            # print(boolean_index)
+            return x[:, np.max(np.where(boolean_index))]
         else:
             print('index', np.min(np.where(boolean_index)))
-            print(np.where(boolean_index))
-            print(boolean_index)
-            return x[np.min(np.where(boolean_index))]            
+            # print(np.where(boolean_index))
+            # print(boolean_index)
+            return x[:, np.min(np.where(boolean_index))]
     else:
-        return np.nan
+        return np.nan*np.ones(m)
 
 
 def hanson_koopmans(x, p, g, j=-1, method='secant', max_iter=200, tol=1e-5,
@@ -168,18 +185,21 @@ def hanson_koopmans(x, p, g, j=-1, method='secant', max_iter=200, tol=1e-5,
 
     Parameters
     ----------
-    x : ndarray (1-D)
+    x : ndarray (1-D, or 2-D)
         Numpy array of samples to compute the HansonKoopmans tolerance
-        interval. Assumed data type is np.float.
+        interval. Assumed data type is np.float. Shape of (m, n) is assumed
+        for 2-D arrays with m number of sets of sample size n.
     p : float
-        Percentile where p < 0.5 and p > 0.
+        Percentile for lower limits when p < 0.5 and upper limits when
+        p >= 0.5.
     g : float
         Confidence level where g > 0. and g < 1.
     n : int
         Number of samples.
     j : int, optional
         Index of the second value to use for the second order statistic.
-        Default is the last value j = -1 = n-1.
+        Default is the last value j = -1 = n-1 if p < 0.5. If p >= 0.5,
+        the second index is defined as n-j+1, with default j = -1.
     method : string, optional
         Which rootfinding method to use to solve for the Hanson-Koopmans
         bound. Default is method='secant' which appears to converge
@@ -193,9 +213,9 @@ def hanson_koopmans(x, p, g, j=-1, method='secant', max_iter=200, tol=1e-5,
 
     Returns
     -------
-    float
-        The Hanson-Koopmans toleranace interval bound. Returns np.nan if the
-        rootfinding method did not converge.
+    ndarray (1-D)
+        The Hanson-Koopmans toleranace interval bound as np.float with shape m.
+        Returns np.nan if the rootfinding method did not converge.
 
     Notes
     -----
@@ -221,22 +241,39 @@ def hanson_koopmans(x, p, g, j=-1, method='secant', max_iter=200, tol=1e-5,
     random samples.
 
     >>> import numpy as np
-    >>> import toleranceinterval
+    >>> import toleranceinterval as ti
     >>> x = np.random.random(10)
-    >>> bound = toleranceinterval.hanson_koopmans(x, 0.1, 0.95)
+    >>> bound = ti.oneside.hanson_koopmans(x, 0.1, 0.95)
+
+    Estimate the 90th percentile with 95% confidence.
+
+    >>> bound = ti.oneside.hanson_koopmans(x, 0.9, 0.95)
 
     """
-    x, n = numpy_array_sort(x)
+    x = numpy_array(x)
+    x = assert_2d_sort(x)
+    m, n = x.shape
     if j == -1:
         # Need to use n for the HansonKoopmans solver
         j = n - 1
     assert j < n
+    if p < 0.5:
+        lower = True
+    else:
+        p = 1.0 - p
+        lower = False
     myhk = HansonKoopmans(p, g, n, j)
     if myhk.fall_back:
-        return non_parametric(x, p, g)
+        if lower:
+            return non_parametric(x, p, g)
+        else:
+            return non_parametric(x, p, g)
     if myhk.un_conv:
         return np.nan
     else:
         b = float(myhk.b)
-        bound = x[j] * (x[0]/x[j])**b
+        if lower:
+            bound = x[:, j] * (x[:, 0]/x[:, j])**b
+        else:
+            bound = b*(x[:, n-1] - x[:, n-j]) + x[:, n-j]
         return bound

@@ -24,8 +24,16 @@
 import numpy as np
 
 
-def numpy_array_sort(x):
+def numpy_array(x):
     if isinstance(x, np.ndarray) is False:
         x = np.array(x)
+    return x
+
+
+def assert_2d_sort(x):
+    if x.ndim == 1:
+        x = x.reshape(1, -1)
+    elif x.ndim > 2:
+        raise ValueError('x can not be more than 2 dimensions')
     x.sort()
-    return x, x.size
+    return x

@@ -1,10 +1,17 @@
-from .toleranceinterval import *  # noqa F401
-# import .hk  # noqa F401
-# import .checks  # noqa F401
-# import .hk as hk
+# from .toleranceinterval import *  # noqa F401
+# import .hk as hk # noqa F401
+# import .checks as checks  # noqa F401
+# from .hk as hk
 # import .checks as checks
-import os  # noqa F401
+# from .oneside import *  # noqa F401
+# import .oneside as oneside
+# from . import oneside
+# from . import oneside
+from . import oneside
+from . import hk
+from . import checks
+import os as _os  # noqa F401
 
 # add rudimentary version tracking
-VERSION_FILE = os.path.join(os.path.dirname(__file__), 'VERSION')
-__version__ = open(VERSION_FILE).read().strip()
+__VERSION_FILE__ = _os.path.join(_os.path.dirname(__file__), 'VERSION')
+__version__ = open(__VERSION_FILE__).read().strip()
