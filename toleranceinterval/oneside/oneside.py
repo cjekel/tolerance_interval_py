@@ -199,7 +199,7 @@ def hanson_koopmans(x, p, g, j=-1, method='secant', max_iter=200, tol=1e-5,
     j : int, optional
         Index of the second value to use for the second order statistic.
         Default is the last value j = -1 = n-1 if p < 0.5. If p >= 0.5,
-        the second index is defined as n-j+1, with default j = -1.
+        the second index is defined as index=n-j-1, with default j = n-1.
     method : string, optional
         Which rootfinding method to use to solve for the Hanson-Koopmans
         bound. Default is method='secant' which appears to converge
@@ -275,5 +275,5 @@ def hanson_koopmans(x, p, g, j=-1, method='secant', max_iter=200, tol=1e-5,
         if lower:
             bound = x[:, j] * (x[:, 0]/x[:, j])**b
         else:
-            bound = b*(x[:, n-1] - x[:, n-j]) + x[:, n-j]
+            bound = b*(x[:, n-1] - x[:, n-j-1]) + x[:, n-j-1]
         return bound

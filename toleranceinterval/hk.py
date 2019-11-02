@@ -25,6 +25,7 @@ from sympy import Symbol, Integral, factorial
 from sympy import gamma, hyper, exp_polar, I, pi, log
 from scipy.special import betainc, betaincinv
 import numpy as np
+from warnings import warn
 
 
 class HansonKoopmans(object):
@@ -100,7 +101,7 @@ class HansonKoopmans(object):
         else:
             self.g = g
         self.n = int(n)
-        if not(j < n and j > 0):
+        if not(j < n and j > -1):
             self.invalid_value(j, 'j')
         else:
             self.j = int(j)
@@ -115,6 +116,12 @@ class HansonKoopmans(object):
         else:
             self.fall_back = False
             b_guess = self.vangel_approx(p=float(self.p))
+            # print(float(b_guess))
+            if np.isnan(b_guess):
+                raise RuntimeError('Bad Vangel Approximation is np.nan')
+            elif b_guess <= 0:
+                b_guess = 1e-2
+                # print(b_guess)
             self.b_guess = b_guess
             if method == 'secant':
                 B, status, count = self.secant_solver(b_guess - 1.)
@@ -128,6 +135,9 @@ class HansonKoopmans(object):
             self.b = B + 1.
             self.un_conv = status
             self.count = count
+            if self.un_conv:
+                war = 'HansonKoopmans root finding method failed to converge!'
+                warn(war, RuntimeWarning)
             # This should raise RuntimeError if not converged!
 
     def invalid_value(self, value, variable):
@@ -213,6 +223,8 @@ class HansonKoopmans(object):
         f1 = self.piB(B_guess + step_size) - self.g
         dfdx = (f1 - f) / step_size
         B_next = B_guess - (f/dfdx)
+        # if np.isnan(np.abs(B_next - B_guess)):
+            # print('nan', self.n, self.j, self.p, self.g)
         un_conv = np.abs(B_next - B_guess) > tol
         while un_conv and count < max_iter:
             B_guess = B_next
