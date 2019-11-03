@@ -8,7 +8,6 @@ install:
   - pip install flake8 pytest-cov
   - pip install pytest --upgrade
   - pip install . --no-cache-dir
-  - cd tests
 script:
   - pytest --cov=toleranceinterval -p no:warnings
 before_script:
