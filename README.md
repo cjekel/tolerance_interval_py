@@ -4,6 +4,8 @@
 
 A small Python library for one-sided tolerance bounds and two-sided tolerance intervals.
 
+[![Build Status](https://travis-ci.com/cjekel/tolerance_interval_py.svg?branch=master)](https://travis-ci.com/cjekel/tolerance_interval_py) [![Coverage Status](https://coveralls.io/repos/github/cjekel/tolerance_interval_py/badge.svg?branch=master)](https://coveralls.io/github/cjekel/tolerance_interval_py?branch=master)
+
 # Methods
 
 This is what has been implemented so far:
