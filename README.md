@@ -20,7 +20,7 @@ git clone https://github.com/cjekel/tolerance_interval_py
 
 # Changelog
 
-Version 0.0.1 right now. When this is released on PyPi changes will be stored in [CHANGELOG.md](CHANGELOG.md).
+Version 0.0.1 right now. When this is released on PyPi changes will be stored in [CHANGELOG.md](https://github.com/cjekel/tolerance_interval_py/blob/master/CHANGELOG.md).
 
 # Methods
 
