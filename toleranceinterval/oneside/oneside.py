@@ -262,7 +262,7 @@ def hanson_koopmans(x, p, g, j=-1, method='secant', max_iter=200, tol=1e-5,
         myhk = HansonKoopmans(1.0-p, g, n, j, method=method, max_iter=max_iter,
                               tol=tol, step_size=step_size)
     if myhk.fall_back:
-        return non_parametric(x, 1.0-p, g)
+        return non_parametric(x, p, g)
     if myhk.un_conv:
         return np.nan
     else:
