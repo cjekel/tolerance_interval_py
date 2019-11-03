@@ -33,14 +33,14 @@ Checkout the [documentation](https://jekel.me/tolerance_interval_py/index.html).
 # Installation
 
 ```
-[sudo] python -m pip install toleranceinterval
+python -m pip install toleranceinterval
 ```
 
 or clone  and install from source
 
 ```
 git clone https://github.com/cjekel/tolerance_interval_py
-[sudo] python -m pip install ./tolerance_interval_py
+python -m pip install ./tolerance_interval_py
 ```
 
 # Examples
