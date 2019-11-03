@@ -8,7 +8,7 @@ A small Python library for one-sided tolerance bounds and two-sided tolerance in
 
 # Methods
 
-Checkout the [documenation](https://jekel.me/tolerance_interval_py/index.html). This is what has been implemented so far:
+Checkout the [documentation](https://jekel.me/tolerance_interval_py/index.html). This is what has been implemented so far:
 
 ## twoside
 
@@ -31,6 +31,12 @@ Checkout the [documenation](https://jekel.me/tolerance_interval_py/index.html). 
 "sympy >= 1.4"
 ```
 # Installation
+
+```
+[sudo] python -m pip install toleranceinterval
+```
+
+or clone  and install from source
 
 ```
 git clone https://github.com/cjekel/tolerance_interval_py
@@ -75,7 +81,7 @@ print('Bounds:', bound)
 
 # Changelog
 
-Version 0.0.1 right now. When this is released on PyPi changes will be stored in [CHANGELOG.md](https://github.com/cjekel/tolerance_interval_py/blob/master/CHANGELOG.md).
+Changes will be stored in [CHANGELOG.md](https://github.com/cjekel/tolerance_interval_py/blob/master/CHANGELOG.md).
 
 # Contributing
 
