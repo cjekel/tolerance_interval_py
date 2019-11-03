@@ -8,7 +8,7 @@ A small Python library for one-sided tolerance bounds and two-sided tolerance in
 
 # Methods
 
-This is what has been implemented so far:
+Checkout the [documenation](https://jekel.me/tolerance_interval_py/index.html). This is what has been implemented so far:
 
 ## twoside
 
