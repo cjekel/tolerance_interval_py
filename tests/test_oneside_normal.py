@@ -98,6 +98,16 @@ class TestEverything(unittest.TestCase):
             x = np.random.random((1, 2, 4, 3))
             normal(x, 0.1, 0.9)
 
+    def test_lists(self):
+        M = [3, 5]
+        N = [5, 7]
+        for m in M:
+            for n in N:
+                x = np.random.random((m, n))
+                bounds = normal(list(x), 0.1, 0.95)
+                _m = bounds.size
+                self.assertTrue(_m == m)
+
 
 if __name__ == '__main__':
     unittest.main()
