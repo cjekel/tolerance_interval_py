@@ -147,5 +147,6 @@ class TestEverything(unittest.TestCase):
         bound = hanson_koopmans_cmh(x, p, g)[0]
         self.assertTrue(np.isclose(bound, x[0]))
 
+
 if __name__ == '__main__':
     unittest.main()

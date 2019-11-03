@@ -12,14 +12,16 @@ class TestEverything(unittest.TestCase):
     # Intervals for a Single Sample. In Applied Statistics and Probability
     # for Engineers, 7th Edition.
 
-    # Control",, Griffin's Statistical Monographs, Number 37, London. 
+    # Control",, Griffin's Statistical Monographs, Number 37, London.
     # sample_sizes = np.array([2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
-    #                         16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 30, 40, 50,
+    #                         16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 30, 40,
+    # 50,
     #                         60, 70, 80, 90, 100])
     # P = np.array([0.90, 0.95, 0.99, 0.90, 0.95, 0.99, 0.90, 0.95, 0.99])
     # G = np.array([0.90, 0.90, 0.90, 0.95, 0.95, 0.95, 0.99, 0.99, 0.99])
     # K = np.array([15.978, 18.800, 24.167, 32.019, 37.674, 48.430, 160.193,
-    #               188.491, 242.300, 5.847, 6.919, 8.974, 8.380, 9.916, 12.861,
+    #               188.491, 242.300, 5.847, 6.919, 8.974, 8.380, 9.916,
+    # 12.861,
     #               18.930, 22.401, 29.055, 4.166, 4.943, 6.440, 5.369, 6.370,
     #               8.299, 9.398, 11.150, 14.527, 3.949, 4.152, 5.423, 4.275,
     #               5.079, 6.634, 6.612, 7.855, 10.260, 3.131, 3.723, 4.870,
@@ -82,7 +84,7 @@ class TestEverything(unittest.TestCase):
         # values from:
         # https://ncss-wpengine.netdna-ssl.com/wp-content/themes/ncss/pdf/Procedures/PASS/Tolerance_Intervals_for_Normal_Data.pdf
         G = [0.9, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95,
-             0.95] 
+             0.95]
         N = [26, 200, 400, 600, 800, 1000, 1200, 1400, 1600, 5910, 866, 179]
         P = [0.8, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9]
         K = [1.6124, 1.7984, 1.7493, 1.7287, 1.7168, 1.7088, 1.7029, 1.6984,
