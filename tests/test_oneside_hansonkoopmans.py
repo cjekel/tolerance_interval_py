@@ -9,7 +9,7 @@ class TestEverything(unittest.TestCase):
     # Values from:
     # Hanson, D. L., & Koopmans, L. H. (1964). Tolerance Limits for
     # the Class of Distributions with Increasing Hazard Rates. Ann. Math.
-    # Statist., 35(4), 1561–1570. https://doi.org/10.1214/aoms/1177700380
+    # Statist., 35(4), 1561-1570. https://doi.org/10.1214/aoms/1177700380
     #
     # data[:, [n, p, g, b]]
 

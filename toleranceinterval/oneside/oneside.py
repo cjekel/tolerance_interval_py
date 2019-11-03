@@ -229,7 +229,7 @@ def hanson_koopmans(x, p, g, j=-1, method='secant', max_iter=200, tol=1e-5,
     ----------
     .. [1] Hanson, D. L., & Koopmans, L. H. (1964). Tolerance Limits for
         the Class of Distributions with Increasing Hazard Rates. Ann. Math.
-        Statist., 35(4), 1561–1570. https://doi.org/10.1214/aoms/1177700380
+        Statist., 35(4), 1561-1570. https://doi.org/10.1214/aoms/1177700380
 
     Examples
     --------
@@ -337,7 +337,7 @@ def hanson_koopmans_cmh(x, p, g, j=-1, method='secant', max_iter=200, tol=1e-5,
     ----------
     .. [1] Hanson, D. L., & Koopmans, L. H. (1964). Tolerance Limits for
         the Class of Distributions with Increasing Hazard Rates. Ann. Math.
-        Statist., 35(4), 1561–1570. https://doi.org/10.1214/aoms/1177700380
+        Statist., 35(4), 1561-1570. https://doi.org/10.1214/aoms/1177700380
     .. [2] Volume 1: Guidelines for Characterization of Structural Materials.
         (2017). In Composite Materials Handbook. SAE International.
 
