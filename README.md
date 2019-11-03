@@ -45,7 +45,7 @@ python -m pip install ./tolerance_interval_py
 
 # Examples
 
-The syntax will follows ```(x, p, g)```, where ```x``` is the random sample, ```p``` is the percentile, and ```g``` is the confidence level. Here ```x``` can be a single set of random samples, or sets of random samples of the same size.
+The syntax follows ```(x, p, g)```, where ```x``` is the random sample, ```p``` is the percentile, and ```g``` is the confidence level. Here ```x``` can be a single set of random samples, or sets of random samples of the same size.
 
 Estimate the 10th percentile to 95% confidence, of a random sample ```x``` using the Hanson and Koopmans 1964 method.
 

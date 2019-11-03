@@ -57,7 +57,7 @@ or clone and install from source
 Examples
 ========
 
-The syntax will follows ``(x, p, g)``, where ``x`` is the random sample,
+The syntax follows ``(x, p, g)``, where ``x`` is the random sample,
 ``p`` is the percentile, and ``g`` is the confidence level. Here ``x``
 can be a single set of random samples, or sets of random samples of the
 same size.
