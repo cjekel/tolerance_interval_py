@@ -119,4 +119,5 @@ class TestEverything(unittest.TestCase):
 
 
 if __name__ == '__main__':
+    np.random.seed(121)
     unittest.main()
