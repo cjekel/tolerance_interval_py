@@ -38,9 +38,9 @@ def normal(x, p, g):
     Parameters
     ----------
     x : ndarray (1-D, or 2-D)
-        Numpy array of samples to compute the HansonKoopmans tolerance
-        interval. Assumed data type is np.float. Shape of (m, n) is assumed
-        for 2-D arrays with m number of sets of sample size n.
+        Numpy array of samples to compute the tolerance bound. Assumed data
+        type is np.float. Shape of (m, n) is assumed for 2-D arrays with m
+        number of sets of sample size n.
     p : float
         Percentile for the TI to estimate.
     g : float
@@ -93,6 +93,50 @@ def normal(x, p, g):
         return x.mean(axis=1) + (k*x.std(axis=1, ddof=1))
 
 
+def lognormal(x, p, g):
+    r"""
+    Compute one-side tolerance bound using the lognormal distribution.
+
+    Computes the one-sided tolerance interval using the lognormal distribution.
+    This just performs a ln and exp transformations of the normal distribution.
+
+    Parameters
+    ----------
+    x : ndarray (1-D, or 2-D)
+        Numpy array of samples to compute the tolerance bound. Assumed data
+        type is np.float. Shape of (m, n) is assumed for 2-D arrays with m
+        number of sets of sample size n.
+    p : float
+        Percentile for the TI to estimate.
+    g : float
+        Confidence level where g > 0. and g < 1.
+
+    Returns
+    -------
+    ndarray (1-D)
+        The normal distribution toleranace bound.
+
+    Examples
+    --------
+    Estimate the 10th percentile lower bound with 95% confidence of the
+    following 100 random samples from a lognormal distribution.
+
+    >>> import numpy as np
+    >>> import toleranceinterval as ti
+    >>> x = np.random.random(100)
+    >>> lb = ti.oneside.lognormal(x, 0.1, 0.95)
+
+    Estimate the 90th percentile upper bound with 95% confidence of the
+    following 100 random samples from a lognormal distribution.
+
+    >>> ub = ti.oneside.lognormal(x, 0.1, 0.95)
+
+    """
+    x = numpy_array(x)  # check if numpy array, if not make numpy array
+    x = assert_2d_sort(x)
+    return np.exp(normal(np.log(x), p, g))
+
+
 def non_parametric(x, p, g):
     r"""
     Compute one-side tolerance bound using traditional non-parametric method.
@@ -104,9 +148,9 @@ def non_parametric(x, p, g):
     Parameters
     ----------
     x : ndarray (1-D, or 2-D)
-        Numpy array of samples to compute the HansonKoopmans tolerance
-        interval. Assumed data type is np.float. Shape of (m, n) is assumed
-        for 2-D arrays with m number of sets of sample size n.
+        Numpy array of samples to compute the tolerance bound. Assumed data
+        type is np.float. Shape of (m, n) is assumed for 2-D arrays with m
+        number of sets of sample size n.
     p : float
         Percentile for the TI to estimate.
     g : float
@@ -182,9 +226,9 @@ def hanson_koopmans(x, p, g, j=-1, method='secant', max_iter=200, tol=1e-5,
     Parameters
     ----------
     x : ndarray (1-D, or 2-D)
-        Numpy array of samples to compute the HansonKoopmans tolerance
-        interval. Assumed data type is np.float. Shape of (m, n) is assumed
-        for 2-D arrays with m number of sets of sample size n.
+        Numpy array of samples to compute the tolerance bound. Assumed data
+        type is np.float. Shape of (m, n) is assumed for 2-D arrays with m
+        number of sets of sample size n.
     p : float
         Percentile for lower limits when p < 0.5 and upper limits when
         p >= 0.5.
@@ -289,9 +333,9 @@ def hanson_koopmans_cmh(x, p, g, j=-1, method='secant', max_iter=200, tol=1e-5,
     Parameters
     ----------
     x : ndarray (1-D, or 2-D)
-        Numpy array of samples to compute the HansonKoopmans tolerance
-        interval. Assumed data type is np.float. Shape of (m, n) is assumed
-        for 2-D arrays with m number of sets of sample size n.
+        Numpy array of samples to compute the tolerance bound. Assumed data
+        type is np.float. Shape of (m, n) is assumed for 2-D arrays with m
+        number of sets of sample size n.
     p : float
         Percentile for lower limits when p < 0.5.
     g : float

@@ -39,9 +39,9 @@ def normal(x, p, g):
     Parameters
     ----------
     x : ndarray (1-D, or 2-D)
-        Numpy array of samples to compute the HansonKoopmans tolerance
-        interval. Assumed data type is np.float. Shape of (m, n) is assumed
-        for 2-D arrays with m number of sets of sample size n.
+        Numpy array of samples to compute the tolerance interval. Assumed data
+        type is np.float. Shape of (m, n) is assumed for 2-D arrays with m
+        number of sets of sample size n.
     p : float
         Percentile for central TI to estimate.
     g : float
@@ -70,12 +70,14 @@ def normal(x, p, g):
     >>> import numpy as np
     >>> import toleranceinterval as ti
     >>> x = np.random.nomral(100)
-    >>> lb = ti.twoside.normal(x, 0.1, 0.95)
+    >>> bound = ti.twoside.normal(x, 0.1, 0.95)
+    >>> print('Lower bound:', bound[:, 0])
+    >>> print('Upper bound:', bound[:, 1])
 
     Estimate the 95th percentile central TI with 95% confidence of the
     following 100 random samples from a normal distribution.
 
-    >>> ub = ti.twoside.normal(x, 0.1, 0.95)
+    >>> bound = ti.twoside.normal(x, 0.1, 0.95)
 
     """
     x = numpy_array(x)  # check if numpy array, if not make numpy array
@@ -94,3 +96,51 @@ def normal(x, p, g):
     bound[:, 0] = xmu - kstd
     bound[:, 1] = xmu + kstd
     return bound
+
+
+def lognormal(x, p, g):
+    r"""
+    Two-side central tolerance interval using the lognormal distribution.
+
+    Computes the two-sided tolerance interval using the lognormal distribution.
+    This just performs a ln and exp transformations of the normal distribution.
+
+    Parameters
+    ----------
+    x : ndarray (1-D, or 2-D)
+        Numpy array of samples to compute the tolerance interval. Assumed data
+        type is np.float. Shape of (m, n) is assumed for 2-D arrays with m
+        number of sets of sample size n.
+    p : float
+        Percentile for central TI to estimate.
+    g : float
+        Confidence level where g > 0. and g < 1.
+
+    Returns
+    -------
+    ndarray (2-D)
+        The lognormal distribution toleranace interval bound. Shape (m, 2)
+        from m sets of samples, where [:, 0] is the lower bound and [:, 1] is
+        the upper bound.
+
+    Examples
+    --------
+    Estimate the 90th percentile central TI with 95% confidence of the
+    following 100 random samples from a lognormal distribution.
+
+    >>> import numpy as np
+    >>> import toleranceinterval as ti
+    >>> x = np.random.random(100)
+    >>> bound = ti.twoside.lognormal(x, 0.1, 0.95)
+    >>> print('Lower bound:', bound[:, 0])
+    >>> print('Upper bound:', bound[:, 1])
+
+    Estimate the 95th percentile central TI with 95% confidence of the
+    following 100 random samples from a normal distribution.
+
+    >>> bound = ti.twoside.lognormal(x, 0.1, 0.95)
+
+    """
+    x = numpy_array(x)  # check if numpy array, if not make numpy array
+    x = assert_2d_sort(x)
+    return np.exp(normal(np.log(x), p, g))

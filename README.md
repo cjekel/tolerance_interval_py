@@ -13,10 +13,12 @@ This is what has been implemented so far:
 ## twoside
 
 - normal
+- lognormal
 
 ## oneside
 
 - normal
+- lognormal
 - non_parametric
 - hanson_koopmans
 - hanson_koopmans_cmh
