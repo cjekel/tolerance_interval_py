@@ -1,3 +1,4 @@
+# -- coding: utf-8 --
 import numpy as np
 from toleranceinterval.twoside import normal
 # from scipy.stats import chi2

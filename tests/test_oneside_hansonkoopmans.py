@@ -1,3 +1,4 @@
+# -- coding: utf-8 --
 import numpy as np
 from toleranceinterval.oneside import hanson_koopmans
 import unittest
