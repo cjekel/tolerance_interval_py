@@ -234,8 +234,6 @@ def hanson_koopmans(x, p, g, j=-1, method='secant', max_iter=200, tol=1e-5,
         p >= 0.5.
     g : float
         Confidence level where g > 0. and g < 1.
-    n : int
-        Number of samples.
     j : int, optional
         Index of the second value to use for the second order statistic.
         Default is the last value j = -1 = n-1 if p < 0.5. If p >= 0.5,
@@ -340,8 +338,6 @@ def hanson_koopmans_cmh(x, p, g, j=-1, method='secant', max_iter=200, tol=1e-5,
         Percentile for lower limits when p < 0.5.
     g : float
         Confidence level where g > 0. and g < 1.
-    n : int
-        Number of samples.
     j : int, optional
         Index of the second value to use for the second order statistic.
         Default is the last value j = -1 = n-1 if p < 0.5. If p >= 0.5,

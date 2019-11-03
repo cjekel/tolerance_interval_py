@@ -260,8 +260,6 @@ def hanson_koopmans(x, p, g, j=-1, method=&#39;secant&#39;, max_iter=200, tol=1e
         p &gt;= 0.5.
     g : float
         Confidence level where g &gt; 0. and g &lt; 1.
-    n : int
-        Number of samples.
     j : int, optional
         Index of the second value to use for the second order statistic.
         Default is the last value j = -1 = n-1 if p &lt; 0.5. If p &gt;= 0.5,
@@ -366,8 +364,6 @@ def hanson_koopmans_cmh(x, p, g, j=-1, method=&#39;secant&#39;, max_iter=200, to
         Percentile for lower limits when p &lt; 0.5.
     g : float
         Confidence level where g &gt; 0. and g &lt; 1.
-    n : int
-        Number of samples.
     j : int, optional
         Index of the second value to use for the second order statistic.
         Default is the last value j = -1 = n-1 if p &lt; 0.5. If p &gt;= 0.5,
@@ -474,8 +470,6 @@ number of sets of sample size n.</dd>
 p &gt;= 0.5.</dd>
 <dt><strong><code>g</code></strong> :&ensp;<code>float</code></dt>
 <dd>Confidence level where g &gt; 0. and g &lt; 1.</dd>
-<dt><strong><code>n</code></strong> :&ensp;<code>int</code></dt>
-<dd>Number of samples.</dd>
 <dt><strong><code>j</code></strong> :&ensp;<code>int</code>, optional</dt>
 <dd>Index of the second value to use for the second order statistic.
 Default is the last value j = -1 = n-1 if p &lt; 0.5. If p &gt;= 0.5,
@@ -544,8 +538,6 @@ random samples.</p>
         p &gt;= 0.5.
     g : float
         Confidence level where g &gt; 0. and g &lt; 1.
-    n : int
-        Number of samples.
     j : int, optional
         Index of the second value to use for the second order statistic.
         Default is the last value j = -1 = n-1 if p &lt; 0.5. If p &gt;= 0.5,
@@ -649,8 +641,6 @@ number of sets of sample size n.</dd>
 <dd>Percentile for lower limits when p &lt; 0.5.</dd>
 <dt><strong><code>g</code></strong> :&ensp;<code>float</code></dt>
 <dd>Confidence level where g &gt; 0. and g &lt; 1.</dd>
-<dt><strong><code>n</code></strong> :&ensp;<code>int</code></dt>
-<dd>Number of samples.</dd>
 <dt><strong><code>j</code></strong> :&ensp;<code>int</code>, optional</dt>
 <dd>Index of the second value to use for the second order statistic.
 Default is the last value j = -1 = n-1 if p &lt; 0.5. If p &gt;= 0.5,
@@ -723,8 +713,6 @@ random samples.</p>
         Percentile for lower limits when p &lt; 0.5.
     g : float
         Confidence level where g &gt; 0. and g &lt; 1.
-    n : int
-        Number of samples.
     j : int, optional
         Index of the second value to use for the second order statistic.
         Default is the last value j = -1 = n-1 if p &lt; 0.5. If p &gt;= 0.5,
