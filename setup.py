@@ -10,8 +10,9 @@ setup(
     py_modules=['toleranceinterval.__init__'],
     url='https://github.com/cjekel/tolerance_interval_py',
     license='MIT License',
-    description='Tolerance intervals in Python',
-    long_description=open('README.rst').read(),
+    description='A small Python library for one-sided tolerance bounds and two-sided tolerance intervals.',  # noqa E501
+    long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
     platforms=['any'],
     install_requires=[
         "numpy >= 1.14.0",
