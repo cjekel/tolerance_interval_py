@@ -34,7 +34,7 @@ def normal(x, p, g):
     distribution. This follows the derivation in [1] to calculate the interval
     as a factor of sample standard deviations away from the sample mean. This
     is an approximation, and does not represent the exact TI. For exact TI see
-    the eqution 2.3.4 from [2]
+    the eqution 2.3.4 from [2].
 
     Parameters
     ----------
