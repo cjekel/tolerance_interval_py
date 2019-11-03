@@ -223,8 +223,6 @@ class HansonKoopmans(object):
         f1 = self.piB(B_guess + step_size) - self.g
         dfdx = (f1 - f) / step_size
         B_next = B_guess - (f/dfdx)
-        # if np.isnan(np.abs(B_next - B_guess)):
-            # print('nan', self.n, self.j, self.p, self.g)
         un_conv = np.abs(B_next - B_guess) > tol
         while un_conv and count < max_iter:
             B_guess = B_next

@@ -1,16 +1,7 @@
-# from .toleranceinterval import *  # noqa F401
-# import .hk as hk # noqa F401
-# import .checks as checks  # noqa F401
-# from .hk as hk
-# import .checks as checks
-# from .oneside import *  # noqa F401
-# import .oneside as oneside
-# from . import oneside
-# from . import oneside
-from . import oneside
-from . import twoside
-from . import hk
-from . import checks
+from . import oneside  # noqa F401
+from . import twoside  # noqa F401
+from . import hk  # noqa F401
+from . import checks  # noqa F401
 import os as _os  # noqa F401
 
 # add rudimentary version tracking

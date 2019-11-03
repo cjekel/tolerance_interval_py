@@ -1,1 +1,1 @@
-from .twoside import normal
+from .twoside import normal  # noqa F401
