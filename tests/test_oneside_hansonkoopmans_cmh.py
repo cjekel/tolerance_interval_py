@@ -138,6 +138,14 @@ class TestEverything(unittest.TestCase):
         b_ = np.log(bound / x[j]) / np.log(x[0]/x[j])
         self.assertTrue(np.isclose(b, b_, rtol=1e-3, atol=1e-4))
 
+    def test_fall_back(self):
+        p = 0.01
+        g = 0.95
+        n = 300
+        x = np.random.random(n)
+        x.sort()
+        bound = hanson_koopmans_cmh(x, p, g)[0]
+        self.assertTrue(np.isclose(bound, x[0]))
 
 if __name__ == '__main__':
     unittest.main()
