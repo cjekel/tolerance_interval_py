@@ -1,0 +1,1165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.7.1" />
+<title>toleranceinterval.oneside.oneside API documentation</title>
+<meta name="description" content="" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{font-weight:bold}#index h4 + ul{margin-bottom:.6em}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>toleranceinterval.oneside.oneside</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># -- coding: utf-8 --
+# MIT License
+#
+# Copyright (c) 2019 Charles Jekel
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the &#34;Software&#34;), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED &#34;AS IS&#34;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+import numpy as np
+from scipy.stats import binom, norm, nct
+from ..hk import HansonKoopmans
+from ..checks import numpy_array, assert_2d_sort
+
+
+def normal(x, p, g):
+    r&#34;&#34;&#34;
+    Compute one-side tolerance bound using the normal distribution.
+
+    Computes the one-sided tolerance interval using the normal distribution.
+    This follows the derivation in [1] to calculate the interval as a factor
+    of sample standard deviations away from the sample mean. See also [2].
+
+    Parameters
+    ----------
+    x : ndarray (1-D, or 2-D)
+        Numpy array of samples to compute the tolerance bound. Assumed data
+        type is np.float. Shape of (m, n) is assumed for 2-D arrays with m
+        number of sets of sample size n.
+    p : float
+        Percentile for the TI to estimate.
+    g : float
+        Confidence level where g &gt; 0. and g &lt; 1.
+
+    Returns
+    -------
+    ndarray (1-D)
+        The normal distribution toleranace bound.
+
+    References
+    ----------
+    .. [1] Young, D. S. (2010). tolerance: An R Package for Estimating
+        Tolerance Intervals. Journal of Statistical Software; Vol 1, Issue 5
+        (2010). Retrieved from http://dx.doi.org/10.18637/jss.v036.i05
+    .. [2] Montgomery, D. C., &amp; Runger, G. C. (2018). Chapter 8. Statistical
+        Intervals for a Single Sample. In Applied Statistics and Probability
+        for Engineers, 7th Edition.
+
+    Examples
+    --------
+    Estimate the 10th percentile lower bound with 95% confidence of the
+    following 100 random samples from a normal distribution.
+
+    &gt;&gt;&gt; import numpy as np
+    &gt;&gt;&gt; import toleranceinterval as ti
+    &gt;&gt;&gt; x = np.random.nomral(100)
+    &gt;&gt;&gt; lb = ti.oneside.normal(x, 0.1, 0.95)
+
+    Estimate the 90th percentile upper bound with 95% confidence of the
+    following 100 random samples from a normal distribution.
+
+    &gt;&gt;&gt; ub = ti.oneside.normal(x, 0.1, 0.95)
+
+    &#34;&#34;&#34;
+    x = numpy_array(x)  # check if numpy array, if not make numpy array
+    x = assert_2d_sort(x)
+    m, n = x.shape
+    if p &lt; 0.5:
+        p = 1.0 - p
+        minus = True
+    else:
+        minus = False
+    zp = norm.ppf(p)
+    t = nct.ppf(g, df=n-1., nc=np.sqrt(n)*zp)
+    k = t / np.sqrt(n)
+    if minus:
+        return x.mean(axis=1) - (k*x.std(axis=1, ddof=1))
+    else:
+        return x.mean(axis=1) + (k*x.std(axis=1, ddof=1))
+
+
+def lognormal(x, p, g):
+    r&#34;&#34;&#34;
+    Compute one-side tolerance bound using the lognormal distribution.
+
+    Computes the one-sided tolerance interval using the lognormal distribution.
+    This just performs a ln and exp transformations of the normal distribution.
+
+    Parameters
+    ----------
+    x : ndarray (1-D, or 2-D)
+        Numpy array of samples to compute the tolerance bound. Assumed data
+        type is np.float. Shape of (m, n) is assumed for 2-D arrays with m
+        number of sets of sample size n.
+    p : float
+        Percentile for the TI to estimate.
+    g : float
+        Confidence level where g &gt; 0. and g &lt; 1.
+
+    Returns
+    -------
+    ndarray (1-D)
+        The normal distribution toleranace bound.
+
+    Examples
+    --------
+    Estimate the 10th percentile lower bound with 95% confidence of the
+    following 100 random samples from a lognormal distribution.
+
+    &gt;&gt;&gt; import numpy as np
+    &gt;&gt;&gt; import toleranceinterval as ti
+    &gt;&gt;&gt; x = np.random.random(100)
+    &gt;&gt;&gt; lb = ti.oneside.lognormal(x, 0.1, 0.95)
+
+    Estimate the 90th percentile upper bound with 95% confidence of the
+    following 100 random samples from a lognormal distribution.
+
+    &gt;&gt;&gt; ub = ti.oneside.lognormal(x, 0.1, 0.95)
+
+    &#34;&#34;&#34;
+    x = numpy_array(x)  # check if numpy array, if not make numpy array
+    x = assert_2d_sort(x)
+    return np.exp(normal(np.log(x), p, g))
+
+
+def non_parametric(x, p, g):
+    r&#34;&#34;&#34;
+    Compute one-side tolerance bound using traditional non-parametric method.
+
+    Computes a tolerance interval for any percentile, confidence level, and
+    number of samples using the traditional non-parametric method [1] [2].
+    This assumes that the true distribution is continuous.
+
+    Parameters
+    ----------
+    x : ndarray (1-D, or 2-D)
+        Numpy array of samples to compute the tolerance bound. Assumed data
+        type is np.float. Shape of (m, n) is assumed for 2-D arrays with m
+        number of sets of sample size n.
+    p : float
+        Percentile for the TI to estimate.
+    g : float
+        Confidence level where g &gt; 0. and g &lt; 1.
+
+    Returns
+    -------
+    ndarray (1-D)
+        The non-parametric toleranace interval bound. Returns np.nan if a
+        non-parametric tolerance interval does not exist for the combination
+        of percentile, confidence level, and number of samples.
+
+    Notes
+    -----
+    The non-parametric tolerance inteval only exists for certain combinations
+    of percentile, confidence level, and number of samples.
+
+    References
+    ----------
+    .. [1] Hong, L. J., Huang, Z., &amp; Lam, H. (2017). Learning-based robust
+        optimization: Procedures and statistical guarantees. ArXiv Preprint
+        ArXiv:1704.04342.
+    .. [2] 9.5.5.3 Nonparametric Procedure. (2017). In MMPDS-12 : Metallic
+        materials properties development and standardization. Battelle
+        Memorial Institute.
+
+    Examples
+    --------
+    Estimate the 10th percentile bound with 95% confidence of the
+    following 300 random samples from a normal distribution.
+
+    &gt;&gt;&gt; import numpy as np
+    &gt;&gt;&gt; import toleranceinterval as ti
+    &gt;&gt;&gt; x = np.random.random(300)
+    &gt;&gt;&gt; bound = ti.oneside.normal(x, 0.1, 0.95)
+
+    Estimate the 90th percentile bound with 95% confidence of the
+    following 300 random samples from a normal distribution.
+
+    &gt;&gt;&gt; bound = ti.oneside.normal(x, 0.9, 0.95)
+
+    &#34;&#34;&#34;
+    x = numpy_array(x)  # check if numpy array, if not make numpy array
+    x = assert_2d_sort(x)
+    m, n = x.shape
+    r = np.arange(0, n)
+    if p &lt; 0.5:
+        left_tail = True
+        confidence_index = binom.sf(r, n, p)
+    else:
+        left_tail = False
+        confidence_index = binom.cdf(r, n, p)
+    boolean_index = confidence_index &gt;= g
+    if boolean_index.sum() &gt; 0:
+        if left_tail:
+            return x[:, np.max(np.where(boolean_index))]
+        else:
+            return x[:, np.min(np.where(boolean_index))]
+    else:
+        return np.nan*np.ones(m)
+
+
+def hanson_koopmans(x, p, g, j=-1, method=&#39;secant&#39;, max_iter=200, tol=1e-5,
+                    step_size=1e-4):
+    r&#34;&#34;&#34;
+    Compute left tail probabilities using the HansonKoopmans method [1].
+
+    Runs the HansonKoopmans solver object to find the left tail bound for any
+    percentile, confidence level, and number of samples. This assumes the
+    lowest value is the first order statistic, but you can specify the index
+    of the second order statistic as j.
+
+    Parameters
+    ----------
+    x : ndarray (1-D, or 2-D)
+        Numpy array of samples to compute the tolerance bound. Assumed data
+        type is np.float. Shape of (m, n) is assumed for 2-D arrays with m
+        number of sets of sample size n.
+    p : float
+        Percentile for lower limits when p &lt; 0.5 and upper limits when
+        p &gt;= 0.5.
+    g : float
+        Confidence level where g &gt; 0. and g &lt; 1.
+    n : int
+        Number of samples.
+    j : int, optional
+        Index of the second value to use for the second order statistic.
+        Default is the last value j = -1 = n-1 if p &lt; 0.5. If p &gt;= 0.5,
+        the second index is defined as index=n-j-1, with default j = n-1.
+    method : string, optional
+        Which rootfinding method to use to solve for the Hanson-Koopmans
+        bound. Default is method=&#39;secant&#39; which appears to converge
+        quickly. Other choices include &#39;newton-raphson&#39; and &#39;halley&#39;.
+    max_iter : int, optional
+        Maximum number of iterations for the root finding method.
+    tol : float, optional
+        Tolerance for the root finding method to converge.
+    step_size : float, optional
+        Step size for the secant solver. Default step_size = 1e-4.
+
+    Returns
+    -------
+    ndarray (1-D)
+        The Hanson-Koopmans toleranace interval bound as np.float with shape m.
+        Returns np.nan if the rootfinding method did not converge.
+
+    Notes
+    -----
+    The Hanson-Koopmans bound assumes the true distribution belongs to the
+    log-concave CDF class of distributions [1].
+
+    This implemnation will always extrapolate beyond the lowest sample. If
+    interpolation is needed within the sample set, this method falls back to
+    the traditional non-parametric method using non_parametric(x, p, g).
+
+    j uses Python style index notation.
+
+
+    References
+    ----------
+    .. [1] Hanson, D. L., &amp; Koopmans, L. H. (1964). Tolerance Limits for
+        the Class of Distributions with Increasing Hazard Rates. Ann. Math.
+        Statist., 35(4), 1561-1570. https://doi.org/10.1214/aoms/1177700380
+
+    Examples
+    --------
+    Estimate the 10th percentile with 95% confidence of the following 10
+    random samples.
+
+    &gt;&gt;&gt; import numpy as np
+    &gt;&gt;&gt; import toleranceinterval as ti
+    &gt;&gt;&gt; x = np.random.random(10)
+    &gt;&gt;&gt; bound = ti.oneside.hanson_koopmans(x, 0.1, 0.95)
+
+    Estimate the 90th percentile with 95% confidence.
+
+    &gt;&gt;&gt; bound = ti.oneside.hanson_koopmans(x, 0.9, 0.95)
+
+    &#34;&#34;&#34;
+    x = numpy_array(x)  # check if numpy array, if not make numpy array
+    x = assert_2d_sort(x)
+    m, n = x.shape
+    if j == -1:
+        # Need to use n for the HansonKoopmans solver
+        j = n - 1
+    assert j &lt; n
+    if p &lt; 0.5:
+        lower = True
+        myhk = HansonKoopmans(p, g, n, j, method=method, max_iter=max_iter,
+                              tol=tol, step_size=step_size)
+    else:
+        lower = False
+        myhk = HansonKoopmans(1.0-p, g, n, j, method=method, max_iter=max_iter,
+                              tol=tol, step_size=step_size)
+    if myhk.fall_back:
+        return non_parametric(x, p, g)
+    if myhk.un_conv:
+        return np.nan
+    else:
+        b = float(myhk.b)
+        if lower:
+            bound = x[:, j] - b*(x[:, j]-x[:, 0])
+        else:
+            bound = b*(x[:, n-1] - x[:, n-j-1]) + x[:, n-j-1]
+        return bound
+
+
+def hanson_koopmans_cmh(x, p, g, j=-1, method=&#39;secant&#39;, max_iter=200, tol=1e-5,
+                        step_size=1e-4):
+    r&#34;&#34;&#34;
+    Compute CMH style tail probabilities using the HansonKoopmans method [1].
+
+    Runs the HansonKoopmans solver object to find the left tail bound for any
+    percentile, confidence level, and number of samples. This assumes the
+    lowest value is the first order statistic, but you can specify the index
+    of the second order statistic as j. CMH variant is the Composite Materials
+    Handbook which calculates the same b, but uses a different order statistic
+    calculation [2].
+
+    Parameters
+    ----------
+    x : ndarray (1-D, or 2-D)
+        Numpy array of samples to compute the tolerance bound. Assumed data
+        type is np.float. Shape of (m, n) is assumed for 2-D arrays with m
+        number of sets of sample size n.
+    p : float
+        Percentile for lower limits when p &lt; 0.5.
+    g : float
+        Confidence level where g &gt; 0. and g &lt; 1.
+    n : int
+        Number of samples.
+    j : int, optional
+        Index of the second value to use for the second order statistic.
+        Default is the last value j = -1 = n-1 if p &lt; 0.5. If p &gt;= 0.5,
+        the second index is defined as index=n-j-1, with default j = n-1.
+    method : string, optional
+        Which rootfinding method to use to solve for the Hanson-Koopmans
+        bound. Default is method=&#39;secant&#39; which appears to converge
+        quickly. Other choices include &#39;newton-raphson&#39; and &#39;halley&#39;.
+    max_iter : int, optional
+        Maximum number of iterations for the root finding method.
+    tol : float, optional
+        Tolerance for the root finding method to converge.
+    step_size : float, optional
+        Step size for the secant solver. Default step_size = 1e-4.
+
+    Returns
+    -------
+    ndarray (1-D)
+        The Hanson-Koopmans toleranace interval bound as np.float with shape m.
+        Returns np.nan if the rootfinding method did not converge.
+
+    Notes
+    -----
+    The Hanson-Koopmans bound assumes the true distribution belongs to the
+    log-concave CDF class of distributions [1].
+
+    This implemnation will always extrapolate beyond the lowest sample. If
+    interpolation is needed within the sample set, this method falls back to
+    the traditional non-parametric method using non_parametric(x, p, g).
+
+    j uses Python style index notation.
+
+    CMH variant estimates lower tails only!
+
+
+    References
+    ----------
+    .. [1] Hanson, D. L., &amp; Koopmans, L. H. (1964). Tolerance Limits for
+        the Class of Distributions with Increasing Hazard Rates. Ann. Math.
+        Statist., 35(4), 1561-1570. https://doi.org/10.1214/aoms/1177700380
+    .. [2] Volume 1: Guidelines for Characterization of Structural Materials.
+        (2017). In Composite Materials Handbook. SAE International.
+
+    Examples
+    --------
+    Estimate the 10th percentile with 95% confidence of the following 10
+    random samples.
+
+    &gt;&gt;&gt; import numpy as np
+    &gt;&gt;&gt; import toleranceinterval as ti
+    &gt;&gt;&gt; x = np.random.random(10)
+    &gt;&gt;&gt; bound = ti.oneside.hanson_koopmans_cmh(x, 0.1, 0.95)
+
+    Estimate the 1st percentile with 95% confidence.
+
+    &gt;&gt;&gt; bound = ti.oneside.hanson_koopmans_cmh(x, 0.01, 0.95)
+
+    &#34;&#34;&#34;
+    x = numpy_array(x)  # check if numpy array, if not make numpy array
+    x = assert_2d_sort(x)
+    m, n = x.shape
+    if j == -1:
+        # Need to use n for the HansonKoopmans solver
+        j = n - 1
+    assert j &lt; n
+    if p &gt;= 0.5:
+        raise ValueError(&#39;p must be &lt; 0.5!&#39;)
+    myhk = HansonKoopmans(p, g, n, j, method=method, max_iter=max_iter,
+                          tol=tol, step_size=step_size)
+    if myhk.fall_back:
+        return non_parametric(x, p, g)
+    if myhk.un_conv:
+        return np.nan
+    else:
+        b = float(myhk.b)
+        bound = x[:, j] * (x[:, 0]/x[:, j])**b
+        return bound</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="toleranceinterval.oneside.oneside.hanson_koopmans"><code class="name flex">
+<span>def <span class="ident">hanson_koopmans</span></span>(<span>x, p, g, j=-1, method='secant', max_iter=200, tol=1e-05, step_size=0.0001)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Compute left tail probabilities using the HansonKoopmans method [1].</p>
+<p>Runs the HansonKoopmans solver object to find the left tail bound for any
+percentile, confidence level, and number of samples. This assumes the
+lowest value is the first order statistic, but you can specify the index
+of the second order statistic as j.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>x</code></strong> :&ensp;<code>ndarray</code> (<code>1</code>-<code>D</code>, or <code>2</code>-<code>D</code>)</dt>
+<dd>Numpy array of samples to compute the tolerance bound. Assumed data
+type is np.float. Shape of (m, n) is assumed for 2-D arrays with m
+number of sets of sample size n.</dd>
+<dt><strong><code>p</code></strong> :&ensp;<code>float</code></dt>
+<dd>Percentile for lower limits when p &lt; 0.5 and upper limits when
+p &gt;= 0.5.</dd>
+<dt><strong><code>g</code></strong> :&ensp;<code>float</code></dt>
+<dd>Confidence level where g &gt; 0. and g &lt; 1.</dd>
+<dt><strong><code>n</code></strong> :&ensp;<code>int</code></dt>
+<dd>Number of samples.</dd>
+<dt><strong><code>j</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>Index of the second value to use for the second order statistic.
+Default is the last value j = -1 = n-1 if p &lt; 0.5. If p &gt;= 0.5,
+the second index is defined as index=n-j-1, with default j = n-1.</dd>
+<dt><strong><code>method</code></strong> :&ensp;<code>string</code>, optional</dt>
+<dd>Which rootfinding method to use to solve for the Hanson-Koopmans
+bound. Default is method='secant' which appears to converge
+quickly. Other choices include 'newton-raphson' and 'halley'.</dd>
+<dt><strong><code>max_iter</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>Maximum number of iterations for the root finding method.</dd>
+<dt><strong><code>tol</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>Tolerance for the root finding method to converge.</dd>
+<dt><strong><code>step_size</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>Step size for the secant solver. Default step_size = 1e-4.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>ndarray</code> (<code>1</code>-<code>D</code>)</dt>
+<dd>The Hanson-Koopmans toleranace interval bound as np.float with shape m.
+Returns np.nan if the rootfinding method did not converge.</dd>
+</dl>
+<h2 id="notes">Notes</h2>
+<p>The Hanson-Koopmans bound assumes the true distribution belongs to the
+log-concave CDF class of distributions [1].</p>
+<p>This implemnation will always extrapolate beyond the lowest sample. If
+interpolation is needed within the sample set, this method falls back to
+the traditional non-parametric method using non_parametric(x, p, g).</p>
+<p>j uses Python style index notation.</p>
+<h2 id="references">References</h2>
+<p>.. [1] Hanson, D. L., &amp; Koopmans, L. H. (1964). Tolerance Limits for
+the Class of Distributions with Increasing Hazard Rates. Ann. Math.
+Statist., 35(4), 1561-1570. <a href="https://doi.org/10.1214/aoms/1177700380">https://doi.org/10.1214/aoms/1177700380</a></p>
+<h2 id="examples">Examples</h2>
+<p>Estimate the 10th percentile with 95% confidence of the following 10
+random samples.</p>
+<pre><code>&gt;&gt;&gt; import numpy as np
+&gt;&gt;&gt; import toleranceinterval as ti
+&gt;&gt;&gt; x = np.random.random(10)
+&gt;&gt;&gt; bound = ti.oneside.hanson_koopmans(x, 0.1, 0.95)
+</code></pre>
+<p>Estimate the 90th percentile with 95% confidence.</p>
+<pre><code>&gt;&gt;&gt; bound = ti.oneside.hanson_koopmans(x, 0.9, 0.95)
+</code></pre></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def hanson_koopmans(x, p, g, j=-1, method=&#39;secant&#39;, max_iter=200, tol=1e-5,
+                    step_size=1e-4):
+    r&#34;&#34;&#34;
+    Compute left tail probabilities using the HansonKoopmans method [1].
+
+    Runs the HansonKoopmans solver object to find the left tail bound for any
+    percentile, confidence level, and number of samples. This assumes the
+    lowest value is the first order statistic, but you can specify the index
+    of the second order statistic as j.
+
+    Parameters
+    ----------
+    x : ndarray (1-D, or 2-D)
+        Numpy array of samples to compute the tolerance bound. Assumed data
+        type is np.float. Shape of (m, n) is assumed for 2-D arrays with m
+        number of sets of sample size n.
+    p : float
+        Percentile for lower limits when p &lt; 0.5 and upper limits when
+        p &gt;= 0.5.
+    g : float
+        Confidence level where g &gt; 0. and g &lt; 1.
+    n : int
+        Number of samples.
+    j : int, optional
+        Index of the second value to use for the second order statistic.
+        Default is the last value j = -1 = n-1 if p &lt; 0.5. If p &gt;= 0.5,
+        the second index is defined as index=n-j-1, with default j = n-1.
+    method : string, optional
+        Which rootfinding method to use to solve for the Hanson-Koopmans
+        bound. Default is method=&#39;secant&#39; which appears to converge
+        quickly. Other choices include &#39;newton-raphson&#39; and &#39;halley&#39;.
+    max_iter : int, optional
+        Maximum number of iterations for the root finding method.
+    tol : float, optional
+        Tolerance for the root finding method to converge.
+    step_size : float, optional
+        Step size for the secant solver. Default step_size = 1e-4.
+
+    Returns
+    -------
+    ndarray (1-D)
+        The Hanson-Koopmans toleranace interval bound as np.float with shape m.
+        Returns np.nan if the rootfinding method did not converge.
+
+    Notes
+    -----
+    The Hanson-Koopmans bound assumes the true distribution belongs to the
+    log-concave CDF class of distributions [1].
+
+    This implemnation will always extrapolate beyond the lowest sample. If
+    interpolation is needed within the sample set, this method falls back to
+    the traditional non-parametric method using non_parametric(x, p, g).
+
+    j uses Python style index notation.
+
+
+    References
+    ----------
+    .. [1] Hanson, D. L., &amp; Koopmans, L. H. (1964). Tolerance Limits for
+        the Class of Distributions with Increasing Hazard Rates. Ann. Math.
+        Statist., 35(4), 1561-1570. https://doi.org/10.1214/aoms/1177700380
+
+    Examples
+    --------
+    Estimate the 10th percentile with 95% confidence of the following 10
+    random samples.
+
+    &gt;&gt;&gt; import numpy as np
+    &gt;&gt;&gt; import toleranceinterval as ti
+    &gt;&gt;&gt; x = np.random.random(10)
+    &gt;&gt;&gt; bound = ti.oneside.hanson_koopmans(x, 0.1, 0.95)
+
+    Estimate the 90th percentile with 95% confidence.
+
+    &gt;&gt;&gt; bound = ti.oneside.hanson_koopmans(x, 0.9, 0.95)
+
+    &#34;&#34;&#34;
+    x = numpy_array(x)  # check if numpy array, if not make numpy array
+    x = assert_2d_sort(x)
+    m, n = x.shape
+    if j == -1:
+        # Need to use n for the HansonKoopmans solver
+        j = n - 1
+    assert j &lt; n
+    if p &lt; 0.5:
+        lower = True
+        myhk = HansonKoopmans(p, g, n, j, method=method, max_iter=max_iter,
+                              tol=tol, step_size=step_size)
+    else:
+        lower = False
+        myhk = HansonKoopmans(1.0-p, g, n, j, method=method, max_iter=max_iter,
+                              tol=tol, step_size=step_size)
+    if myhk.fall_back:
+        return non_parametric(x, p, g)
+    if myhk.un_conv:
+        return np.nan
+    else:
+        b = float(myhk.b)
+        if lower:
+            bound = x[:, j] - b*(x[:, j]-x[:, 0])
+        else:
+            bound = b*(x[:, n-1] - x[:, n-j-1]) + x[:, n-j-1]
+        return bound</code></pre>
+</details>
+</dd>
+<dt id="toleranceinterval.oneside.oneside.hanson_koopmans_cmh"><code class="name flex">
+<span>def <span class="ident">hanson_koopmans_cmh</span></span>(<span>x, p, g, j=-1, method='secant', max_iter=200, tol=1e-05, step_size=0.0001)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Compute CMH style tail probabilities using the HansonKoopmans method [1].</p>
+<p>Runs the HansonKoopmans solver object to find the left tail bound for any
+percentile, confidence level, and number of samples. This assumes the
+lowest value is the first order statistic, but you can specify the index
+of the second order statistic as j. CMH variant is the Composite Materials
+Handbook which calculates the same b, but uses a different order statistic
+calculation [2].</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>x</code></strong> :&ensp;<code>ndarray</code> (<code>1</code>-<code>D</code>, or <code>2</code>-<code>D</code>)</dt>
+<dd>Numpy array of samples to compute the tolerance bound. Assumed data
+type is np.float. Shape of (m, n) is assumed for 2-D arrays with m
+number of sets of sample size n.</dd>
+<dt><strong><code>p</code></strong> :&ensp;<code>float</code></dt>
+<dd>Percentile for lower limits when p &lt; 0.5.</dd>
+<dt><strong><code>g</code></strong> :&ensp;<code>float</code></dt>
+<dd>Confidence level where g &gt; 0. and g &lt; 1.</dd>
+<dt><strong><code>n</code></strong> :&ensp;<code>int</code></dt>
+<dd>Number of samples.</dd>
+<dt><strong><code>j</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>Index of the second value to use for the second order statistic.
+Default is the last value j = -1 = n-1 if p &lt; 0.5. If p &gt;= 0.5,
+the second index is defined as index=n-j-1, with default j = n-1.</dd>
+<dt><strong><code>method</code></strong> :&ensp;<code>string</code>, optional</dt>
+<dd>Which rootfinding method to use to solve for the Hanson-Koopmans
+bound. Default is method='secant' which appears to converge
+quickly. Other choices include 'newton-raphson' and 'halley'.</dd>
+<dt><strong><code>max_iter</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>Maximum number of iterations for the root finding method.</dd>
+<dt><strong><code>tol</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>Tolerance for the root finding method to converge.</dd>
+<dt><strong><code>step_size</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>Step size for the secant solver. Default step_size = 1e-4.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>ndarray</code> (<code>1</code>-<code>D</code>)</dt>
+<dd>The Hanson-Koopmans toleranace interval bound as np.float with shape m.
+Returns np.nan if the rootfinding method did not converge.</dd>
+</dl>
+<h2 id="notes">Notes</h2>
+<p>The Hanson-Koopmans bound assumes the true distribution belongs to the
+log-concave CDF class of distributions [1].</p>
+<p>This implemnation will always extrapolate beyond the lowest sample. If
+interpolation is needed within the sample set, this method falls back to
+the traditional non-parametric method using non_parametric(x, p, g).</p>
+<p>j uses Python style index notation.</p>
+<p>CMH variant estimates lower tails only!</p>
+<h2 id="references">References</h2>
+<p>.. [1] Hanson, D. L., &amp; Koopmans, L. H. (1964). Tolerance Limits for
+the Class of Distributions with Increasing Hazard Rates. Ann. Math.
+Statist., 35(4), 1561-1570. <a href="https://doi.org/10.1214/aoms/1177700380">https://doi.org/10.1214/aoms/1177700380</a>
+.. [2] Volume 1: Guidelines for Characterization of Structural Materials.
+(2017). In Composite Materials Handbook. SAE International.</p>
+<h2 id="examples">Examples</h2>
+<p>Estimate the 10th percentile with 95% confidence of the following 10
+random samples.</p>
+<pre><code>&gt;&gt;&gt; import numpy as np
+&gt;&gt;&gt; import toleranceinterval as ti
+&gt;&gt;&gt; x = np.random.random(10)
+&gt;&gt;&gt; bound = ti.oneside.hanson_koopmans_cmh(x, 0.1, 0.95)
+</code></pre>
+<p>Estimate the 1st percentile with 95% confidence.</p>
+<pre><code>&gt;&gt;&gt; bound = ti.oneside.hanson_koopmans_cmh(x, 0.01, 0.95)
+</code></pre></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def hanson_koopmans_cmh(x, p, g, j=-1, method=&#39;secant&#39;, max_iter=200, tol=1e-5,
+                        step_size=1e-4):
+    r&#34;&#34;&#34;
+    Compute CMH style tail probabilities using the HansonKoopmans method [1].
+
+    Runs the HansonKoopmans solver object to find the left tail bound for any
+    percentile, confidence level, and number of samples. This assumes the
+    lowest value is the first order statistic, but you can specify the index
+    of the second order statistic as j. CMH variant is the Composite Materials
+    Handbook which calculates the same b, but uses a different order statistic
+    calculation [2].
+
+    Parameters
+    ----------
+    x : ndarray (1-D, or 2-D)
+        Numpy array of samples to compute the tolerance bound. Assumed data
+        type is np.float. Shape of (m, n) is assumed for 2-D arrays with m
+        number of sets of sample size n.
+    p : float
+        Percentile for lower limits when p &lt; 0.5.
+    g : float
+        Confidence level where g &gt; 0. and g &lt; 1.
+    n : int
+        Number of samples.
+    j : int, optional
+        Index of the second value to use for the second order statistic.
+        Default is the last value j = -1 = n-1 if p &lt; 0.5. If p &gt;= 0.5,
+        the second index is defined as index=n-j-1, with default j = n-1.
+    method : string, optional
+        Which rootfinding method to use to solve for the Hanson-Koopmans
+        bound. Default is method=&#39;secant&#39; which appears to converge
+        quickly. Other choices include &#39;newton-raphson&#39; and &#39;halley&#39;.
+    max_iter : int, optional
+        Maximum number of iterations for the root finding method.
+    tol : float, optional
+        Tolerance for the root finding method to converge.
+    step_size : float, optional
+        Step size for the secant solver. Default step_size = 1e-4.
+
+    Returns
+    -------
+    ndarray (1-D)
+        The Hanson-Koopmans toleranace interval bound as np.float with shape m.
+        Returns np.nan if the rootfinding method did not converge.
+
+    Notes
+    -----
+    The Hanson-Koopmans bound assumes the true distribution belongs to the
+    log-concave CDF class of distributions [1].
+
+    This implemnation will always extrapolate beyond the lowest sample. If
+    interpolation is needed within the sample set, this method falls back to
+    the traditional non-parametric method using non_parametric(x, p, g).
+
+    j uses Python style index notation.
+
+    CMH variant estimates lower tails only!
+
+
+    References
+    ----------
+    .. [1] Hanson, D. L., &amp; Koopmans, L. H. (1964). Tolerance Limits for
+        the Class of Distributions with Increasing Hazard Rates. Ann. Math.
+        Statist., 35(4), 1561-1570. https://doi.org/10.1214/aoms/1177700380
+    .. [2] Volume 1: Guidelines for Characterization of Structural Materials.
+        (2017). In Composite Materials Handbook. SAE International.
+
+    Examples
+    --------
+    Estimate the 10th percentile with 95% confidence of the following 10
+    random samples.
+
+    &gt;&gt;&gt; import numpy as np
+    &gt;&gt;&gt; import toleranceinterval as ti
+    &gt;&gt;&gt; x = np.random.random(10)
+    &gt;&gt;&gt; bound = ti.oneside.hanson_koopmans_cmh(x, 0.1, 0.95)
+
+    Estimate the 1st percentile with 95% confidence.
+
+    &gt;&gt;&gt; bound = ti.oneside.hanson_koopmans_cmh(x, 0.01, 0.95)
+
+    &#34;&#34;&#34;
+    x = numpy_array(x)  # check if numpy array, if not make numpy array
+    x = assert_2d_sort(x)
+    m, n = x.shape
+    if j == -1:
+        # Need to use n for the HansonKoopmans solver
+        j = n - 1
+    assert j &lt; n
+    if p &gt;= 0.5:
+        raise ValueError(&#39;p must be &lt; 0.5!&#39;)
+    myhk = HansonKoopmans(p, g, n, j, method=method, max_iter=max_iter,
+                          tol=tol, step_size=step_size)
+    if myhk.fall_back:
+        return non_parametric(x, p, g)
+    if myhk.un_conv:
+        return np.nan
+    else:
+        b = float(myhk.b)
+        bound = x[:, j] * (x[:, 0]/x[:, j])**b
+        return bound</code></pre>
+</details>
+</dd>
+<dt id="toleranceinterval.oneside.oneside.lognormal"><code class="name flex">
+<span>def <span class="ident">lognormal</span></span>(<span>x, p, g)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Compute one-side tolerance bound using the lognormal distribution.</p>
+<p>Computes the one-sided tolerance interval using the lognormal distribution.
+This just performs a ln and exp transformations of the normal distribution.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>x</code></strong> :&ensp;<code>ndarray</code> (<code>1</code>-<code>D</code>, or <code>2</code>-<code>D</code>)</dt>
+<dd>Numpy array of samples to compute the tolerance bound. Assumed data
+type is np.float. Shape of (m, n) is assumed for 2-D arrays with m
+number of sets of sample size n.</dd>
+<dt><strong><code>p</code></strong> :&ensp;<code>float</code></dt>
+<dd>Percentile for the TI to estimate.</dd>
+<dt><strong><code>g</code></strong> :&ensp;<code>float</code></dt>
+<dd>Confidence level where g &gt; 0. and g &lt; 1.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>ndarray</code> (<code>1</code>-<code>D</code>)</dt>
+<dd>The normal distribution toleranace bound.</dd>
+</dl>
+<h2 id="examples">Examples</h2>
+<p>Estimate the 10th percentile lower bound with 95% confidence of the
+following 100 random samples from a lognormal distribution.</p>
+<pre><code>&gt;&gt;&gt; import numpy as np
+&gt;&gt;&gt; import toleranceinterval as ti
+&gt;&gt;&gt; x = np.random.random(100)
+&gt;&gt;&gt; lb = ti.oneside.lognormal(x, 0.1, 0.95)
+</code></pre>
+<p>Estimate the 90th percentile upper bound with 95% confidence of the
+following 100 random samples from a lognormal distribution.</p>
+<pre><code>&gt;&gt;&gt; ub = ti.oneside.lognormal(x, 0.1, 0.95)
+</code></pre></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def lognormal(x, p, g):
+    r&#34;&#34;&#34;
+    Compute one-side tolerance bound using the lognormal distribution.
+
+    Computes the one-sided tolerance interval using the lognormal distribution.
+    This just performs a ln and exp transformations of the normal distribution.
+
+    Parameters
+    ----------
+    x : ndarray (1-D, or 2-D)
+        Numpy array of samples to compute the tolerance bound. Assumed data
+        type is np.float. Shape of (m, n) is assumed for 2-D arrays with m
+        number of sets of sample size n.
+    p : float
+        Percentile for the TI to estimate.
+    g : float
+        Confidence level where g &gt; 0. and g &lt; 1.
+
+    Returns
+    -------
+    ndarray (1-D)
+        The normal distribution toleranace bound.
+
+    Examples
+    --------
+    Estimate the 10th percentile lower bound with 95% confidence of the
+    following 100 random samples from a lognormal distribution.
+
+    &gt;&gt;&gt; import numpy as np
+    &gt;&gt;&gt; import toleranceinterval as ti
+    &gt;&gt;&gt; x = np.random.random(100)
+    &gt;&gt;&gt; lb = ti.oneside.lognormal(x, 0.1, 0.95)
+
+    Estimate the 90th percentile upper bound with 95% confidence of the
+    following 100 random samples from a lognormal distribution.
+
+    &gt;&gt;&gt; ub = ti.oneside.lognormal(x, 0.1, 0.95)
+
+    &#34;&#34;&#34;
+    x = numpy_array(x)  # check if numpy array, if not make numpy array
+    x = assert_2d_sort(x)
+    return np.exp(normal(np.log(x), p, g))</code></pre>
+</details>
+</dd>
+<dt id="toleranceinterval.oneside.oneside.non_parametric"><code class="name flex">
+<span>def <span class="ident">non_parametric</span></span>(<span>x, p, g)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Compute one-side tolerance bound using traditional non-parametric method.</p>
+<p>Computes a tolerance interval for any percentile, confidence level, and
+number of samples using the traditional non-parametric method [1] [2].
+This assumes that the true distribution is continuous.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>x</code></strong> :&ensp;<code>ndarray</code> (<code>1</code>-<code>D</code>, or <code>2</code>-<code>D</code>)</dt>
+<dd>Numpy array of samples to compute the tolerance bound. Assumed data
+type is np.float. Shape of (m, n) is assumed for 2-D arrays with m
+number of sets of sample size n.</dd>
+<dt><strong><code>p</code></strong> :&ensp;<code>float</code></dt>
+<dd>Percentile for the TI to estimate.</dd>
+<dt><strong><code>g</code></strong> :&ensp;<code>float</code></dt>
+<dd>Confidence level where g &gt; 0. and g &lt; 1.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>ndarray</code> (<code>1</code>-<code>D</code>)</dt>
+<dd>The non-parametric toleranace interval bound. Returns np.nan if a
+non-parametric tolerance interval does not exist for the combination
+of percentile, confidence level, and number of samples.</dd>
+</dl>
+<h2 id="notes">Notes</h2>
+<p>The non-parametric tolerance inteval only exists for certain combinations
+of percentile, confidence level, and number of samples.</p>
+<h2 id="references">References</h2>
+<p>.. [1] Hong, L. J., Huang, Z., &amp; Lam, H. (2017). Learning-based robust
+optimization: Procedures and statistical guarantees. ArXiv Preprint
+ArXiv:1704.04342.
+.. [2] 9.5.5.3 Nonparametric Procedure. (2017). In MMPDS-12 : Metallic
+materials properties development and standardization. Battelle
+Memorial Institute.</p>
+<h2 id="examples">Examples</h2>
+<p>Estimate the 10th percentile bound with 95% confidence of the
+following 300 random samples from a normal distribution.</p>
+<pre><code>&gt;&gt;&gt; import numpy as np
+&gt;&gt;&gt; import toleranceinterval as ti
+&gt;&gt;&gt; x = np.random.random(300)
+&gt;&gt;&gt; bound = ti.oneside.normal(x, 0.1, 0.95)
+</code></pre>
+<p>Estimate the 90th percentile bound with 95% confidence of the
+following 300 random samples from a normal distribution.</p>
+<pre><code>&gt;&gt;&gt; bound = ti.oneside.normal(x, 0.9, 0.95)
+</code></pre></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def non_parametric(x, p, g):
+    r&#34;&#34;&#34;
+    Compute one-side tolerance bound using traditional non-parametric method.
+
+    Computes a tolerance interval for any percentile, confidence level, and
+    number of samples using the traditional non-parametric method [1] [2].
+    This assumes that the true distribution is continuous.
+
+    Parameters
+    ----------
+    x : ndarray (1-D, or 2-D)
+        Numpy array of samples to compute the tolerance bound. Assumed data
+        type is np.float. Shape of (m, n) is assumed for 2-D arrays with m
+        number of sets of sample size n.
+    p : float
+        Percentile for the TI to estimate.
+    g : float
+        Confidence level where g &gt; 0. and g &lt; 1.
+
+    Returns
+    -------
+    ndarray (1-D)
+        The non-parametric toleranace interval bound. Returns np.nan if a
+        non-parametric tolerance interval does not exist for the combination
+        of percentile, confidence level, and number of samples.
+
+    Notes
+    -----
+    The non-parametric tolerance inteval only exists for certain combinations
+    of percentile, confidence level, and number of samples.
+
+    References
+    ----------
+    .. [1] Hong, L. J., Huang, Z., &amp; Lam, H. (2017). Learning-based robust
+        optimization: Procedures and statistical guarantees. ArXiv Preprint
+        ArXiv:1704.04342.
+    .. [2] 9.5.5.3 Nonparametric Procedure. (2017). In MMPDS-12 : Metallic
+        materials properties development and standardization. Battelle
+        Memorial Institute.
+
+    Examples
+    --------
+    Estimate the 10th percentile bound with 95% confidence of the
+    following 300 random samples from a normal distribution.
+
+    &gt;&gt;&gt; import numpy as np
+    &gt;&gt;&gt; import toleranceinterval as ti
+    &gt;&gt;&gt; x = np.random.random(300)
+    &gt;&gt;&gt; bound = ti.oneside.normal(x, 0.1, 0.95)
+
+    Estimate the 90th percentile bound with 95% confidence of the
+    following 300 random samples from a normal distribution.
+
+    &gt;&gt;&gt; bound = ti.oneside.normal(x, 0.9, 0.95)
+
+    &#34;&#34;&#34;
+    x = numpy_array(x)  # check if numpy array, if not make numpy array
+    x = assert_2d_sort(x)
+    m, n = x.shape
+    r = np.arange(0, n)
+    if p &lt; 0.5:
+        left_tail = True
+        confidence_index = binom.sf(r, n, p)
+    else:
+        left_tail = False
+        confidence_index = binom.cdf(r, n, p)
+    boolean_index = confidence_index &gt;= g
+    if boolean_index.sum() &gt; 0:
+        if left_tail:
+            return x[:, np.max(np.where(boolean_index))]
+        else:
+            return x[:, np.min(np.where(boolean_index))]
+    else:
+        return np.nan*np.ones(m)</code></pre>
+</details>
+</dd>
+<dt id="toleranceinterval.oneside.oneside.normal"><code class="name flex">
+<span>def <span class="ident">normal</span></span>(<span>x, p, g)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Compute one-side tolerance bound using the normal distribution.</p>
+<p>Computes the one-sided tolerance interval using the normal distribution.
+This follows the derivation in [1] to calculate the interval as a factor
+of sample standard deviations away from the sample mean. See also [2].</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>x</code></strong> :&ensp;<code>ndarray</code> (<code>1</code>-<code>D</code>, or <code>2</code>-<code>D</code>)</dt>
+<dd>Numpy array of samples to compute the tolerance bound. Assumed data
+type is np.float. Shape of (m, n) is assumed for 2-D arrays with m
+number of sets of sample size n.</dd>
+<dt><strong><code>p</code></strong> :&ensp;<code>float</code></dt>
+<dd>Percentile for the TI to estimate.</dd>
+<dt><strong><code>g</code></strong> :&ensp;<code>float</code></dt>
+<dd>Confidence level where g &gt; 0. and g &lt; 1.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>ndarray</code> (<code>1</code>-<code>D</code>)</dt>
+<dd>The normal distribution toleranace bound.</dd>
+</dl>
+<h2 id="references">References</h2>
+<p>.. [1] Young, D. S. (2010). tolerance: An R Package for Estimating
+Tolerance Intervals. Journal of Statistical Software; Vol 1, Issue 5
+(2010). Retrieved from <a href="http://dx.doi.org/10.18637/jss.v036.i05">http://dx.doi.org/10.18637/jss.v036.i05</a>
+.. [2] Montgomery, D. C., &amp; Runger, G. C. (2018). Chapter 8. Statistical
+Intervals for a Single Sample. In Applied Statistics and Probability
+for Engineers, 7th Edition.</p>
+<h2 id="examples">Examples</h2>
+<p>Estimate the 10th percentile lower bound with 95% confidence of the
+following 100 random samples from a normal distribution.</p>
+<pre><code>&gt;&gt;&gt; import numpy as np
+&gt;&gt;&gt; import toleranceinterval as ti
+&gt;&gt;&gt; x = np.random.nomral(100)
+&gt;&gt;&gt; lb = ti.oneside.normal(x, 0.1, 0.95)
+</code></pre>
+<p>Estimate the 90th percentile upper bound with 95% confidence of the
+following 100 random samples from a normal distribution.</p>
+<pre><code>&gt;&gt;&gt; ub = ti.oneside.normal(x, 0.1, 0.95)
+</code></pre></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def normal(x, p, g):
+    r&#34;&#34;&#34;
+    Compute one-side tolerance bound using the normal distribution.
+
+    Computes the one-sided tolerance interval using the normal distribution.
+    This follows the derivation in [1] to calculate the interval as a factor
+    of sample standard deviations away from the sample mean. See also [2].
+
+    Parameters
+    ----------
+    x : ndarray (1-D, or 2-D)
+        Numpy array of samples to compute the tolerance bound. Assumed data
+        type is np.float. Shape of (m, n) is assumed for 2-D arrays with m
+        number of sets of sample size n.
+    p : float
+        Percentile for the TI to estimate.
+    g : float
+        Confidence level where g &gt; 0. and g &lt; 1.
+
+    Returns
+    -------
+    ndarray (1-D)
+        The normal distribution toleranace bound.
+
+    References
+    ----------
+    .. [1] Young, D. S. (2010). tolerance: An R Package for Estimating
+        Tolerance Intervals. Journal of Statistical Software; Vol 1, Issue 5
+        (2010). Retrieved from http://dx.doi.org/10.18637/jss.v036.i05
+    .. [2] Montgomery, D. C., &amp; Runger, G. C. (2018). Chapter 8. Statistical
+        Intervals for a Single Sample. In Applied Statistics and Probability
+        for Engineers, 7th Edition.
+
+    Examples
+    --------
+    Estimate the 10th percentile lower bound with 95% confidence of the
+    following 100 random samples from a normal distribution.
+
+    &gt;&gt;&gt; import numpy as np
+    &gt;&gt;&gt; import toleranceinterval as ti
+    &gt;&gt;&gt; x = np.random.nomral(100)
+    &gt;&gt;&gt; lb = ti.oneside.normal(x, 0.1, 0.95)
+
+    Estimate the 90th percentile upper bound with 95% confidence of the
+    following 100 random samples from a normal distribution.
+
+    &gt;&gt;&gt; ub = ti.oneside.normal(x, 0.1, 0.95)
+
+    &#34;&#34;&#34;
+    x = numpy_array(x)  # check if numpy array, if not make numpy array
+    x = assert_2d_sort(x)
+    m, n = x.shape
+    if p &lt; 0.5:
+        p = 1.0 - p
+        minus = True
+    else:
+        minus = False
+    zp = norm.ppf(p)
+    t = nct.ppf(g, df=n-1., nc=np.sqrt(n)*zp)
+    k = t / np.sqrt(n)
+    if minus:
+        return x.mean(axis=1) - (k*x.std(axis=1, ddof=1))
+    else:
+        return x.mean(axis=1) + (k*x.std(axis=1, ddof=1))</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="toleranceinterval.oneside" href="index.html">toleranceinterval.oneside</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="toleranceinterval.oneside.oneside.hanson_koopmans" href="#toleranceinterval.oneside.oneside.hanson_koopmans">hanson_koopmans</a></code></li>
+<li><code><a title="toleranceinterval.oneside.oneside.hanson_koopmans_cmh" href="#toleranceinterval.oneside.oneside.hanson_koopmans_cmh">hanson_koopmans_cmh</a></code></li>
+<li><code><a title="toleranceinterval.oneside.oneside.lognormal" href="#toleranceinterval.oneside.oneside.lognormal">lognormal</a></code></li>
+<li><code><a title="toleranceinterval.oneside.oneside.non_parametric" href="#toleranceinterval.oneside.oneside.non_parametric">non_parametric</a></code></li>
+<li><code><a title="toleranceinterval.oneside.oneside.normal" href="#toleranceinterval.oneside.oneside.normal">normal</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.7.1</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

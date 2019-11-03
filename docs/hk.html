@@ -1,0 +1,887 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.7.1" />
+<title>toleranceinterval.hk API documentation</title>
+<meta name="description" content="" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{font-weight:bold}#index h4 + ul{margin-bottom:.6em}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>toleranceinterval.hk</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># -- coding: utf-8 --
+# MIT License
+#
+# Copyright (c) 2019 Charles Jekel
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the &#34;Software&#34;), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED &#34;AS IS&#34;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+from sympy import Symbol, Integral, factorial
+from sympy import gamma, hyper, exp_polar, I, pi, log
+from scipy.special import betainc, betaincinv
+import numpy as np
+from warnings import warn
+
+
+class HansonKoopmans(object):
+
+    def __init__(self, p, g, n, j, method=&#39;secant&#39;, max_iter=200,
+                 tol=1e-5, step_size=1e-4):
+        r&#34;&#34;&#34;
+        An object to solve for the Hanson-Koopmans bound.
+
+        Solve the Hanson-Koopmans [1] bound for any percentile, confidence
+        level, and number of samples.  This assumes the lowest value is the
+        first order statistic, but you can specify the index of the second
+        order statistic as j.
+
+        Parameters
+        ----------
+        p : float
+            Percentile where p &lt; 0.5 and p &gt; 0.
+        g : float
+            Confidence level where g &gt; 0. and g &lt; 1.
+        n : int
+            Number of samples.
+        j : int
+            Index of the second value to use for the second order statistic.
+        method : string, optional
+            Which rootfinding method to use to solve for the Hanson-Koopmans
+            bound. Default is method=&#39;secant&#39; which appears to converge
+            quickly. Other choices include &#39;newton-raphson&#39; and &#39;halley&#39;.
+        max_iter : int, optional
+            Maximum number of iterations for the root finding method.
+        tol : float, optional
+            Tolerance for the root finding method to converge.
+        step_size : float, optional
+            Step size for the secant solver. Default step_size = 1e-4.
+
+        Attributes
+        ----------
+        b : float_like
+            Hanson-Koopmans bound.
+        un_conv : bool
+            Unconvergence status. If un_conv, then the method did not converge.
+        count : int
+            Number of iterations used in the root finding method.
+        fall_back : bool
+            Whether to fall back to the traditional non-parametric method.
+
+        Raises
+        ------
+        ValueError
+            Incorrect input, or unable to comptue the Hanson-Koopmans bound.
+
+        References
+        ----------
+        .. [1] Hanson, D. L., &amp; Koopmans, L. H. (1964). Tolerance Limits for
+            the Class of Distributions with Increasing Hazard Rates. Ann. Math.
+            Statist., 35(4), 1561–1570. https://doi.org/10.1214/aoms/1177700380
+        .. [2] Vangel, M. G. (1994). One-sided nonparametric tolerance limits.
+            Communications in Statistics - Simulation and Computation, 23(4),
+            1137–1154. https://doi.org/10.1080/03610919408813222
+        &#34;&#34;&#34;
+        self.max_iter = max_iter
+        self.tol = tol
+        self.step_size = step_size
+        # create a dummy variable v
+        self.v = Symbol(&#39;v&#39;, nonzero=True, rational=True, positive=True)
+        # check that p, g, n, j are valid
+        if not(p &lt; 0.5 and p &gt; 0.):
+            self.invalid_value(p, &#39;p&#39;)
+        else:
+            self.p = p
+        if not(g &gt; 0. and g &lt; 1.):
+            self.invalid_value(g, &#39;g&#39;)
+        else:
+            self.g = g
+        self.n = int(n)
+        if not(j &lt; n and j &gt; -1):
+            self.invalid_value(j, &#39;j&#39;)
+        else:
+            self.j = int(j)
+        # compute the stuff that doesn&#39;t depend on b
+        self.constant_vales()
+        # compute b = 1
+        pi_B_1 = self.piB(0)  # remember that b - 1 = B; b = B + 1
+        if pi_B_1 &gt;= self.g:
+            self.fall_back = True
+            # raise ValueError(&#39;b = 1, defer to traditional methods...&#39;)
+            # raise RunTimeWarning?
+        else:
+            self.fall_back = False
+            b_guess = self.vangel_approx(p=float(self.p))
+            # print(float(b_guess))
+            if np.isnan(b_guess):
+                raise RuntimeError(&#39;Bad Vangel Approximation is np.nan&#39;)
+            elif b_guess &lt;= 0:
+                b_guess = 1e-2
+                # print(b_guess)
+            self.b_guess = b_guess
+            if method == &#39;secant&#39;:
+                B, status, count = self.secant_solver(b_guess - 1.)
+            elif method == &#39;newton-raphson&#39;:
+                B, status, count = self.nr_solver(b_guess - 1.)
+            elif method == &#39;halley&#39;:
+                B, status, count = self.halley_solver(b_guess - 1.)
+            else:
+                raise ValueError(str(method) + &#39; is not a valid method!&#39;)
+
+            self.b = B + 1.
+            self.un_conv = status
+            self.count = count
+            if self.un_conv:
+                war = &#39;HansonKoopmans root finding method failed to converge!&#39;
+                warn(war, RuntimeWarning)
+            # This should raise RuntimeError if not converged!
+
+    def invalid_value(self, value, variable):
+        err = str(value) + &#39; was not a valid value for &#39; + variable
+        raise ValueError(err)
+
+    def constant_vales(self):
+        self.nj = self.n-self.j-1
+        self.A = factorial(self.n) / (factorial(self.nj) *
+                                      factorial(self.j-1))
+        # compute the left integral
+        int_left = (self.p*self.p**self.j*gamma(self.j + 1) *
+                    hyper((-self.nj, self.j + 1),
+                          (self.j + 2,),
+                          self.p*exp_polar(2*I*pi)) /
+                    (self.j*gamma(self.j + 2)))
+        self.int_left = int_left.evalf()  # evaluates to double precision
+
+    def piB(self, B):
+        int_right_exp = (self.v**self.j*(1 - self.v)**self.nj/self.j
+                         - (1 - self.v)**self.nj*(-self.p**(1/(B + 1)) *
+                         self.v**(B/(B + 1)) + self.v)**self.j/self.j)
+        int_right = Integral(int_right_exp, (self.v, self.p, 1)).evalf()
+        return (self.int_left + int_right)*self.A
+
+    def dpiB(self, B):
+        d_int_right_exp_B = (self.v**self.j*(1 - self.v)**self.nj/self.j -
+                             (1 - self.v)**self.nj*(-self.p**(1/(B + 1)) *
+                             self.v**(B/(B + 1))*(-B/(B + 1)**2 + 1/(B + 1)) *
+                             log(self.v) + self.p**(1/(B + 1))*self.v **
+                             (B / (B + 1))*log(self.p)/(B + 1)**2 + self.v) **
+                             self.j / self.j)
+        d_int_right = Integral(d_int_right_exp_B, (self.v, self.p, 1)).evalf()
+        return d_int_right*self.A
+
+    def d2piB2(self, B):
+        d2_int_r_B = (-(1 - self.v)**self.nj*(-self.p**(1/(B + 1))*self.v **
+                      (B/(B + 1))*(-B/(B + 1)**2 + 1/(B + 1))*log(self.v) +
+                      self.p**(1/(B + 1))*self.v**(B/(B + 1))*log(self.p) /
+                      (B + 1)**2 + self.v)**self.j*(-self.p**(1/(B + 1)) *
+                      self.v**(B/(B + 1))*(2*B/(B + 1)**3 - 2/(B + 1)**2) *
+                      log(self.v) - self.p**(1/(B + 1))*self.v**(B/(B + 1)) *
+                      (-B/(B + 1)**2 + 1/(B + 1))**2*log(self.v)**2 + 2 *
+                      self.p**(1/(B + 1))*self.v**(B/(B + 1)) *
+                      (-B/(B + 1)**2 + 1/(B + 1))
+                      * log(self.p)*log(self.v)/(B + 1)**2 - 2 *
+                      self.p**(1/(B + 1))*self.v**(B/(B + 1))*log(self.p) /
+                      (B + 1)**3 - self.p**(1/(B + 1))*self.v**(B/(B + 1)) *
+                      log(self.p)**2/(B + 1)**4)/(-self.p**(1/(B + 1)) *
+                      self.v**(B/(B + 1))*(-B/(B + 1)**2 + 1/(B + 1)) *
+                      log(self.v) + self.p**(1/(B + 1))*self.v **
+                      (B/(B + 1)) *
+                      log(self.p)/(B + 1)**2 + self.v))
+        d2_int_right = Integral(d2_int_r_B, (self.v, self.p, 1)).evalf()
+        return d2_int_right*self.A
+
+    def vangel_approx(self, n=None, i=None, j=None, p=None, g=None):
+        if n is None:
+            n = self.n
+        if i is None:
+            i = 1
+        if j is None:
+            j = self.j+1
+        if p is None:
+            p = self.p
+        if g is None:
+            g = self.g
+        betatmp = betainc(j, n-j+1, p)
+        a = g - betatmp
+        b = 1.0 - betatmp
+        q = betaincinv(i, j-i, a/b)
+        return np.log(((p)*(n+1))/j) / np.log(q)
+
+    def secant_solver(self, B_guess, max_iter=None, tol=None, step_size=None):
+        if max_iter is None:
+            max_iter = self.max_iter
+        if tol is None:
+            tol = self.tol
+        if step_size is None:
+            step_size = self.step_size
+        count = 0
+        f = self.piB(B_guess) - self.g
+        f1 = self.piB(B_guess + step_size) - self.g
+        dfdx = (f1 - f) / step_size
+        B_next = B_guess - (f/dfdx)
+        un_conv = np.abs(B_next - B_guess) &gt; tol
+        while un_conv and count &lt; max_iter:
+            B_guess = B_next
+            f = self.piB(B_guess) - self.g
+            f1 = self.piB(B_guess + step_size) - self.g
+            dfdx = (f1 - f) / step_size
+            B_next = B_guess - (f/dfdx)
+            un_conv = np.abs(B_next - B_guess) &gt; tol
+            count += 1
+        return B_next, un_conv, count
+
+    def nr_solver(self, B_guess, max_iter=None, tol=None):
+        if max_iter is None:
+            max_iter = self.max_iter
+        if tol is None:
+            tol = self.tol
+        count = 0
+        f = self.piB(B_guess) - self.g
+        dfdx = self.dpiB(B_guess)
+        B_next = B_guess - (f/dfdx)
+        un_conv = np.abs(B_next - B_guess) &gt; tol
+        while un_conv and count &lt; max_iter:
+            B_guess = B_next
+            f = self.piB(B_guess) - self.g
+            dfdx = self.dpiB(B_guess)
+            B_next = B_guess - (f/dfdx)
+            un_conv = np.abs(B_next - B_guess) &gt; tol
+            count += 1
+        return B_next, un_conv, count
+
+    def halley_solver(self, B_guess, max_iter=None, tol=None):
+        if max_iter is None:
+            max_iter = self.max_iter
+        if tol is None:
+            tol = self.tol
+        count = 0
+        f = self.piB(B_guess) - self.g
+        dfdx = self.dpiB(B_guess)
+        d2fdx2 = self.d2piB2(B_guess)
+        B_next = B_guess - ((2*f*dfdx) / (2*(dfdx**2) - (f*d2fdx2)))
+        un_conv = np.abs(B_next - B_guess) &gt; tol
+        while un_conv and count &lt; max_iter:
+            B_guess = B_next
+            f = self.piB(B_guess) - self.g
+            dfdx = self.dpiB(B_guess)
+            d2fdx2 = self.d2piB2(B_guess)
+            B_next = B_guess - ((2*f*dfdx) / (2*(dfdx**2) - (f*d2fdx2)))
+            un_conv = np.abs(B_next - B_guess) &gt; tol
+            count += 1
+        return B_next, un_conv, count</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="toleranceinterval.hk.HansonKoopmans"><code class="flex name class">
+<span>class <span class="ident">HansonKoopmans</span></span>
+<span>(</span><span>p, g, n, j, method='secant', max_iter=200, tol=1e-05, step_size=0.0001)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>An object to solve for the Hanson-Koopmans bound.</p>
+<p>Solve the Hanson-Koopmans [1] bound for any percentile, confidence
+level, and number of samples.
+This assumes the lowest value is the
+first order statistic, but you can specify the index of the second
+order statistic as j.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>p</code></strong> :&ensp;<code>float</code></dt>
+<dd>Percentile where p &lt; 0.5 and p &gt; 0.</dd>
+<dt><strong><code>g</code></strong> :&ensp;<code>float</code></dt>
+<dd>Confidence level where g &gt; 0. and g &lt; 1.</dd>
+<dt><strong><code>n</code></strong> :&ensp;<code>int</code></dt>
+<dd>Number of samples.</dd>
+<dt><strong><code>j</code></strong> :&ensp;<code>int</code></dt>
+<dd>Index of the second value to use for the second order statistic.</dd>
+<dt><strong><code>method</code></strong> :&ensp;<code>string</code>, optional</dt>
+<dd>Which rootfinding method to use to solve for the Hanson-Koopmans
+bound. Default is method='secant' which appears to converge
+quickly. Other choices include 'newton-raphson' and 'halley'.</dd>
+<dt><strong><code>max_iter</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>Maximum number of iterations for the root finding method.</dd>
+<dt><strong><code>tol</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>Tolerance for the root finding method to converge.</dd>
+<dt><strong><code>step_size</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>Step size for the secant solver. Default step_size = 1e-4.</dd>
+</dl>
+<h2 id="attributes">Attributes</h2>
+<dl>
+<dt><strong><code>b</code></strong> :&ensp;<code>float_like</code></dt>
+<dd>Hanson-Koopmans bound.</dd>
+<dt><strong><code>un_conv</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Unconvergence status. If un_conv, then the method did not converge.</dd>
+<dt><strong><code>count</code></strong> :&ensp;<code>int</code></dt>
+<dd>Number of iterations used in the root finding method.</dd>
+<dt><strong><code>fall_back</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Whether to fall back to the traditional non-parametric method.</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>ValueError</code></dt>
+<dd>Incorrect input, or unable to comptue the Hanson-Koopmans bound.</dd>
+</dl>
+<h2 id="references">References</h2>
+<p>.. [1] Hanson, D. L., &amp; Koopmans, L. H. (1964). Tolerance Limits for
+the Class of Distributions with Increasing Hazard Rates. Ann. Math.
+Statist., 35(4), 1561–1570. <a href="https://doi.org/10.1214/aoms/1177700380">https://doi.org/10.1214/aoms/1177700380</a>
+.. [2] Vangel, M. G. (1994). One-sided nonparametric tolerance limits.
+Communications in Statistics - Simulation and Computation, 23(4),
+1137–1154. <a href="https://doi.org/10.1080/03610919408813222">https://doi.org/10.1080/03610919408813222</a></p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class HansonKoopmans(object):
+
+    def __init__(self, p, g, n, j, method=&#39;secant&#39;, max_iter=200,
+                 tol=1e-5, step_size=1e-4):
+        r&#34;&#34;&#34;
+        An object to solve for the Hanson-Koopmans bound.
+
+        Solve the Hanson-Koopmans [1] bound for any percentile, confidence
+        level, and number of samples.  This assumes the lowest value is the
+        first order statistic, but you can specify the index of the second
+        order statistic as j.
+
+        Parameters
+        ----------
+        p : float
+            Percentile where p &lt; 0.5 and p &gt; 0.
+        g : float
+            Confidence level where g &gt; 0. and g &lt; 1.
+        n : int
+            Number of samples.
+        j : int
+            Index of the second value to use for the second order statistic.
+        method : string, optional
+            Which rootfinding method to use to solve for the Hanson-Koopmans
+            bound. Default is method=&#39;secant&#39; which appears to converge
+            quickly. Other choices include &#39;newton-raphson&#39; and &#39;halley&#39;.
+        max_iter : int, optional
+            Maximum number of iterations for the root finding method.
+        tol : float, optional
+            Tolerance for the root finding method to converge.
+        step_size : float, optional
+            Step size for the secant solver. Default step_size = 1e-4.
+
+        Attributes
+        ----------
+        b : float_like
+            Hanson-Koopmans bound.
+        un_conv : bool
+            Unconvergence status. If un_conv, then the method did not converge.
+        count : int
+            Number of iterations used in the root finding method.
+        fall_back : bool
+            Whether to fall back to the traditional non-parametric method.
+
+        Raises
+        ------
+        ValueError
+            Incorrect input, or unable to comptue the Hanson-Koopmans bound.
+
+        References
+        ----------
+        .. [1] Hanson, D. L., &amp; Koopmans, L. H. (1964). Tolerance Limits for
+            the Class of Distributions with Increasing Hazard Rates. Ann. Math.
+            Statist., 35(4), 1561–1570. https://doi.org/10.1214/aoms/1177700380
+        .. [2] Vangel, M. G. (1994). One-sided nonparametric tolerance limits.
+            Communications in Statistics - Simulation and Computation, 23(4),
+            1137–1154. https://doi.org/10.1080/03610919408813222
+        &#34;&#34;&#34;
+        self.max_iter = max_iter
+        self.tol = tol
+        self.step_size = step_size
+        # create a dummy variable v
+        self.v = Symbol(&#39;v&#39;, nonzero=True, rational=True, positive=True)
+        # check that p, g, n, j are valid
+        if not(p &lt; 0.5 and p &gt; 0.):
+            self.invalid_value(p, &#39;p&#39;)
+        else:
+            self.p = p
+        if not(g &gt; 0. and g &lt; 1.):
+            self.invalid_value(g, &#39;g&#39;)
+        else:
+            self.g = g
+        self.n = int(n)
+        if not(j &lt; n and j &gt; -1):
+            self.invalid_value(j, &#39;j&#39;)
+        else:
+            self.j = int(j)
+        # compute the stuff that doesn&#39;t depend on b
+        self.constant_vales()
+        # compute b = 1
+        pi_B_1 = self.piB(0)  # remember that b - 1 = B; b = B + 1
+        if pi_B_1 &gt;= self.g:
+            self.fall_back = True
+            # raise ValueError(&#39;b = 1, defer to traditional methods...&#39;)
+            # raise RunTimeWarning?
+        else:
+            self.fall_back = False
+            b_guess = self.vangel_approx(p=float(self.p))
+            # print(float(b_guess))
+            if np.isnan(b_guess):
+                raise RuntimeError(&#39;Bad Vangel Approximation is np.nan&#39;)
+            elif b_guess &lt;= 0:
+                b_guess = 1e-2
+                # print(b_guess)
+            self.b_guess = b_guess
+            if method == &#39;secant&#39;:
+                B, status, count = self.secant_solver(b_guess - 1.)
+            elif method == &#39;newton-raphson&#39;:
+                B, status, count = self.nr_solver(b_guess - 1.)
+            elif method == &#39;halley&#39;:
+                B, status, count = self.halley_solver(b_guess - 1.)
+            else:
+                raise ValueError(str(method) + &#39; is not a valid method!&#39;)
+
+            self.b = B + 1.
+            self.un_conv = status
+            self.count = count
+            if self.un_conv:
+                war = &#39;HansonKoopmans root finding method failed to converge!&#39;
+                warn(war, RuntimeWarning)
+            # This should raise RuntimeError if not converged!
+
+    def invalid_value(self, value, variable):
+        err = str(value) + &#39; was not a valid value for &#39; + variable
+        raise ValueError(err)
+
+    def constant_vales(self):
+        self.nj = self.n-self.j-1
+        self.A = factorial(self.n) / (factorial(self.nj) *
+                                      factorial(self.j-1))
+        # compute the left integral
+        int_left = (self.p*self.p**self.j*gamma(self.j + 1) *
+                    hyper((-self.nj, self.j + 1),
+                          (self.j + 2,),
+                          self.p*exp_polar(2*I*pi)) /
+                    (self.j*gamma(self.j + 2)))
+        self.int_left = int_left.evalf()  # evaluates to double precision
+
+    def piB(self, B):
+        int_right_exp = (self.v**self.j*(1 - self.v)**self.nj/self.j
+                         - (1 - self.v)**self.nj*(-self.p**(1/(B + 1)) *
+                         self.v**(B/(B + 1)) + self.v)**self.j/self.j)
+        int_right = Integral(int_right_exp, (self.v, self.p, 1)).evalf()
+        return (self.int_left + int_right)*self.A
+
+    def dpiB(self, B):
+        d_int_right_exp_B = (self.v**self.j*(1 - self.v)**self.nj/self.j -
+                             (1 - self.v)**self.nj*(-self.p**(1/(B + 1)) *
+                             self.v**(B/(B + 1))*(-B/(B + 1)**2 + 1/(B + 1)) *
+                             log(self.v) + self.p**(1/(B + 1))*self.v **
+                             (B / (B + 1))*log(self.p)/(B + 1)**2 + self.v) **
+                             self.j / self.j)
+        d_int_right = Integral(d_int_right_exp_B, (self.v, self.p, 1)).evalf()
+        return d_int_right*self.A
+
+    def d2piB2(self, B):
+        d2_int_r_B = (-(1 - self.v)**self.nj*(-self.p**(1/(B + 1))*self.v **
+                      (B/(B + 1))*(-B/(B + 1)**2 + 1/(B + 1))*log(self.v) +
+                      self.p**(1/(B + 1))*self.v**(B/(B + 1))*log(self.p) /
+                      (B + 1)**2 + self.v)**self.j*(-self.p**(1/(B + 1)) *
+                      self.v**(B/(B + 1))*(2*B/(B + 1)**3 - 2/(B + 1)**2) *
+                      log(self.v) - self.p**(1/(B + 1))*self.v**(B/(B + 1)) *
+                      (-B/(B + 1)**2 + 1/(B + 1))**2*log(self.v)**2 + 2 *
+                      self.p**(1/(B + 1))*self.v**(B/(B + 1)) *
+                      (-B/(B + 1)**2 + 1/(B + 1))
+                      * log(self.p)*log(self.v)/(B + 1)**2 - 2 *
+                      self.p**(1/(B + 1))*self.v**(B/(B + 1))*log(self.p) /
+                      (B + 1)**3 - self.p**(1/(B + 1))*self.v**(B/(B + 1)) *
+                      log(self.p)**2/(B + 1)**4)/(-self.p**(1/(B + 1)) *
+                      self.v**(B/(B + 1))*(-B/(B + 1)**2 + 1/(B + 1)) *
+                      log(self.v) + self.p**(1/(B + 1))*self.v **
+                      (B/(B + 1)) *
+                      log(self.p)/(B + 1)**2 + self.v))
+        d2_int_right = Integral(d2_int_r_B, (self.v, self.p, 1)).evalf()
+        return d2_int_right*self.A
+
+    def vangel_approx(self, n=None, i=None, j=None, p=None, g=None):
+        if n is None:
+            n = self.n
+        if i is None:
+            i = 1
+        if j is None:
+            j = self.j+1
+        if p is None:
+            p = self.p
+        if g is None:
+            g = self.g
+        betatmp = betainc(j, n-j+1, p)
+        a = g - betatmp
+        b = 1.0 - betatmp
+        q = betaincinv(i, j-i, a/b)
+        return np.log(((p)*(n+1))/j) / np.log(q)
+
+    def secant_solver(self, B_guess, max_iter=None, tol=None, step_size=None):
+        if max_iter is None:
+            max_iter = self.max_iter
+        if tol is None:
+            tol = self.tol
+        if step_size is None:
+            step_size = self.step_size
+        count = 0
+        f = self.piB(B_guess) - self.g
+        f1 = self.piB(B_guess + step_size) - self.g
+        dfdx = (f1 - f) / step_size
+        B_next = B_guess - (f/dfdx)
+        un_conv = np.abs(B_next - B_guess) &gt; tol
+        while un_conv and count &lt; max_iter:
+            B_guess = B_next
+            f = self.piB(B_guess) - self.g
+            f1 = self.piB(B_guess + step_size) - self.g
+            dfdx = (f1 - f) / step_size
+            B_next = B_guess - (f/dfdx)
+            un_conv = np.abs(B_next - B_guess) &gt; tol
+            count += 1
+        return B_next, un_conv, count
+
+    def nr_solver(self, B_guess, max_iter=None, tol=None):
+        if max_iter is None:
+            max_iter = self.max_iter
+        if tol is None:
+            tol = self.tol
+        count = 0
+        f = self.piB(B_guess) - self.g
+        dfdx = self.dpiB(B_guess)
+        B_next = B_guess - (f/dfdx)
+        un_conv = np.abs(B_next - B_guess) &gt; tol
+        while un_conv and count &lt; max_iter:
+            B_guess = B_next
+            f = self.piB(B_guess) - self.g
+            dfdx = self.dpiB(B_guess)
+            B_next = B_guess - (f/dfdx)
+            un_conv = np.abs(B_next - B_guess) &gt; tol
+            count += 1
+        return B_next, un_conv, count
+
+    def halley_solver(self, B_guess, max_iter=None, tol=None):
+        if max_iter is None:
+            max_iter = self.max_iter
+        if tol is None:
+            tol = self.tol
+        count = 0
+        f = self.piB(B_guess) - self.g
+        dfdx = self.dpiB(B_guess)
+        d2fdx2 = self.d2piB2(B_guess)
+        B_next = B_guess - ((2*f*dfdx) / (2*(dfdx**2) - (f*d2fdx2)))
+        un_conv = np.abs(B_next - B_guess) &gt; tol
+        while un_conv and count &lt; max_iter:
+            B_guess = B_next
+            f = self.piB(B_guess) - self.g
+            dfdx = self.dpiB(B_guess)
+            d2fdx2 = self.d2piB2(B_guess)
+            B_next = B_guess - ((2*f*dfdx) / (2*(dfdx**2) - (f*d2fdx2)))
+            un_conv = np.abs(B_next - B_guess) &gt; tol
+            count += 1
+        return B_next, un_conv, count</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="toleranceinterval.hk.HansonKoopmans.constant_vales"><code class="name flex">
+<span>def <span class="ident">constant_vales</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def constant_vales(self):
+    self.nj = self.n-self.j-1
+    self.A = factorial(self.n) / (factorial(self.nj) *
+                                  factorial(self.j-1))
+    # compute the left integral
+    int_left = (self.p*self.p**self.j*gamma(self.j + 1) *
+                hyper((-self.nj, self.j + 1),
+                      (self.j + 2,),
+                      self.p*exp_polar(2*I*pi)) /
+                (self.j*gamma(self.j + 2)))
+    self.int_left = int_left.evalf()  # evaluates to double precision</code></pre>
+</details>
+</dd>
+<dt id="toleranceinterval.hk.HansonKoopmans.d2piB2"><code class="name flex">
+<span>def <span class="ident">d2piB2</span></span>(<span>self, B)</span>
+</code></dt>
+<dd>
+<section class="desc"></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def d2piB2(self, B):
+    d2_int_r_B = (-(1 - self.v)**self.nj*(-self.p**(1/(B + 1))*self.v **
+                  (B/(B + 1))*(-B/(B + 1)**2 + 1/(B + 1))*log(self.v) +
+                  self.p**(1/(B + 1))*self.v**(B/(B + 1))*log(self.p) /
+                  (B + 1)**2 + self.v)**self.j*(-self.p**(1/(B + 1)) *
+                  self.v**(B/(B + 1))*(2*B/(B + 1)**3 - 2/(B + 1)**2) *
+                  log(self.v) - self.p**(1/(B + 1))*self.v**(B/(B + 1)) *
+                  (-B/(B + 1)**2 + 1/(B + 1))**2*log(self.v)**2 + 2 *
+                  self.p**(1/(B + 1))*self.v**(B/(B + 1)) *
+                  (-B/(B + 1)**2 + 1/(B + 1))
+                  * log(self.p)*log(self.v)/(B + 1)**2 - 2 *
+                  self.p**(1/(B + 1))*self.v**(B/(B + 1))*log(self.p) /
+                  (B + 1)**3 - self.p**(1/(B + 1))*self.v**(B/(B + 1)) *
+                  log(self.p)**2/(B + 1)**4)/(-self.p**(1/(B + 1)) *
+                  self.v**(B/(B + 1))*(-B/(B + 1)**2 + 1/(B + 1)) *
+                  log(self.v) + self.p**(1/(B + 1))*self.v **
+                  (B/(B + 1)) *
+                  log(self.p)/(B + 1)**2 + self.v))
+    d2_int_right = Integral(d2_int_r_B, (self.v, self.p, 1)).evalf()
+    return d2_int_right*self.A</code></pre>
+</details>
+</dd>
+<dt id="toleranceinterval.hk.HansonKoopmans.dpiB"><code class="name flex">
+<span>def <span class="ident">dpiB</span></span>(<span>self, B)</span>
+</code></dt>
+<dd>
+<section class="desc"></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def dpiB(self, B):
+    d_int_right_exp_B = (self.v**self.j*(1 - self.v)**self.nj/self.j -
+                         (1 - self.v)**self.nj*(-self.p**(1/(B + 1)) *
+                         self.v**(B/(B + 1))*(-B/(B + 1)**2 + 1/(B + 1)) *
+                         log(self.v) + self.p**(1/(B + 1))*self.v **
+                         (B / (B + 1))*log(self.p)/(B + 1)**2 + self.v) **
+                         self.j / self.j)
+    d_int_right = Integral(d_int_right_exp_B, (self.v, self.p, 1)).evalf()
+    return d_int_right*self.A</code></pre>
+</details>
+</dd>
+<dt id="toleranceinterval.hk.HansonKoopmans.halley_solver"><code class="name flex">
+<span>def <span class="ident">halley_solver</span></span>(<span>self, B_guess, max_iter=None, tol=None)</span>
+</code></dt>
+<dd>
+<section class="desc"></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def halley_solver(self, B_guess, max_iter=None, tol=None):
+    if max_iter is None:
+        max_iter = self.max_iter
+    if tol is None:
+        tol = self.tol
+    count = 0
+    f = self.piB(B_guess) - self.g
+    dfdx = self.dpiB(B_guess)
+    d2fdx2 = self.d2piB2(B_guess)
+    B_next = B_guess - ((2*f*dfdx) / (2*(dfdx**2) - (f*d2fdx2)))
+    un_conv = np.abs(B_next - B_guess) &gt; tol
+    while un_conv and count &lt; max_iter:
+        B_guess = B_next
+        f = self.piB(B_guess) - self.g
+        dfdx = self.dpiB(B_guess)
+        d2fdx2 = self.d2piB2(B_guess)
+        B_next = B_guess - ((2*f*dfdx) / (2*(dfdx**2) - (f*d2fdx2)))
+        un_conv = np.abs(B_next - B_guess) &gt; tol
+        count += 1
+    return B_next, un_conv, count</code></pre>
+</details>
+</dd>
+<dt id="toleranceinterval.hk.HansonKoopmans.invalid_value"><code class="name flex">
+<span>def <span class="ident">invalid_value</span></span>(<span>self, value, variable)</span>
+</code></dt>
+<dd>
+<section class="desc"></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def invalid_value(self, value, variable):
+    err = str(value) + &#39; was not a valid value for &#39; + variable
+    raise ValueError(err)</code></pre>
+</details>
+</dd>
+<dt id="toleranceinterval.hk.HansonKoopmans.nr_solver"><code class="name flex">
+<span>def <span class="ident">nr_solver</span></span>(<span>self, B_guess, max_iter=None, tol=None)</span>
+</code></dt>
+<dd>
+<section class="desc"></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def nr_solver(self, B_guess, max_iter=None, tol=None):
+    if max_iter is None:
+        max_iter = self.max_iter
+    if tol is None:
+        tol = self.tol
+    count = 0
+    f = self.piB(B_guess) - self.g
+    dfdx = self.dpiB(B_guess)
+    B_next = B_guess - (f/dfdx)
+    un_conv = np.abs(B_next - B_guess) &gt; tol
+    while un_conv and count &lt; max_iter:
+        B_guess = B_next
+        f = self.piB(B_guess) - self.g
+        dfdx = self.dpiB(B_guess)
+        B_next = B_guess - (f/dfdx)
+        un_conv = np.abs(B_next - B_guess) &gt; tol
+        count += 1
+    return B_next, un_conv, count</code></pre>
+</details>
+</dd>
+<dt id="toleranceinterval.hk.HansonKoopmans.piB"><code class="name flex">
+<span>def <span class="ident">piB</span></span>(<span>self, B)</span>
+</code></dt>
+<dd>
+<section class="desc"></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def piB(self, B):
+    int_right_exp = (self.v**self.j*(1 - self.v)**self.nj/self.j
+                     - (1 - self.v)**self.nj*(-self.p**(1/(B + 1)) *
+                     self.v**(B/(B + 1)) + self.v)**self.j/self.j)
+    int_right = Integral(int_right_exp, (self.v, self.p, 1)).evalf()
+    return (self.int_left + int_right)*self.A</code></pre>
+</details>
+</dd>
+<dt id="toleranceinterval.hk.HansonKoopmans.secant_solver"><code class="name flex">
+<span>def <span class="ident">secant_solver</span></span>(<span>self, B_guess, max_iter=None, tol=None, step_size=None)</span>
+</code></dt>
+<dd>
+<section class="desc"></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def secant_solver(self, B_guess, max_iter=None, tol=None, step_size=None):
+    if max_iter is None:
+        max_iter = self.max_iter
+    if tol is None:
+        tol = self.tol
+    if step_size is None:
+        step_size = self.step_size
+    count = 0
+    f = self.piB(B_guess) - self.g
+    f1 = self.piB(B_guess + step_size) - self.g
+    dfdx = (f1 - f) / step_size
+    B_next = B_guess - (f/dfdx)
+    un_conv = np.abs(B_next - B_guess) &gt; tol
+    while un_conv and count &lt; max_iter:
+        B_guess = B_next
+        f = self.piB(B_guess) - self.g
+        f1 = self.piB(B_guess + step_size) - self.g
+        dfdx = (f1 - f) / step_size
+        B_next = B_guess - (f/dfdx)
+        un_conv = np.abs(B_next - B_guess) &gt; tol
+        count += 1
+    return B_next, un_conv, count</code></pre>
+</details>
+</dd>
+<dt id="toleranceinterval.hk.HansonKoopmans.vangel_approx"><code class="name flex">
+<span>def <span class="ident">vangel_approx</span></span>(<span>self, n=None, i=None, j=None, p=None, g=None)</span>
+</code></dt>
+<dd>
+<section class="desc"></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def vangel_approx(self, n=None, i=None, j=None, p=None, g=None):
+    if n is None:
+        n = self.n
+    if i is None:
+        i = 1
+    if j is None:
+        j = self.j+1
+    if p is None:
+        p = self.p
+    if g is None:
+        g = self.g
+    betatmp = betainc(j, n-j+1, p)
+    a = g - betatmp
+    b = 1.0 - betatmp
+    q = betaincinv(i, j-i, a/b)
+    return np.log(((p)*(n+1))/j) / np.log(q)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="toleranceinterval" href="index.html">toleranceinterval</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="toleranceinterval.hk.HansonKoopmans" href="#toleranceinterval.hk.HansonKoopmans">HansonKoopmans</a></code></h4>
+<ul class="two-column">
+<li><code><a title="toleranceinterval.hk.HansonKoopmans.constant_vales" href="#toleranceinterval.hk.HansonKoopmans.constant_vales">constant_vales</a></code></li>
+<li><code><a title="toleranceinterval.hk.HansonKoopmans.d2piB2" href="#toleranceinterval.hk.HansonKoopmans.d2piB2">d2piB2</a></code></li>
+<li><code><a title="toleranceinterval.hk.HansonKoopmans.dpiB" href="#toleranceinterval.hk.HansonKoopmans.dpiB">dpiB</a></code></li>
+<li><code><a title="toleranceinterval.hk.HansonKoopmans.halley_solver" href="#toleranceinterval.hk.HansonKoopmans.halley_solver">halley_solver</a></code></li>
+<li><code><a title="toleranceinterval.hk.HansonKoopmans.invalid_value" href="#toleranceinterval.hk.HansonKoopmans.invalid_value">invalid_value</a></code></li>
+<li><code><a title="toleranceinterval.hk.HansonKoopmans.nr_solver" href="#toleranceinterval.hk.HansonKoopmans.nr_solver">nr_solver</a></code></li>
+<li><code><a title="toleranceinterval.hk.HansonKoopmans.piB" href="#toleranceinterval.hk.HansonKoopmans.piB">piB</a></code></li>
+<li><code><a title="toleranceinterval.hk.HansonKoopmans.secant_solver" href="#toleranceinterval.hk.HansonKoopmans.secant_solver">secant_solver</a></code></li>
+<li><code><a title="toleranceinterval.hk.HansonKoopmans.vangel_approx" href="#toleranceinterval.hk.HansonKoopmans.vangel_approx">vangel_approx</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.7.1</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>
