@@ -110,7 +110,7 @@ Contributing
 ============
 
 All contributions are welcome! Please let me know if you have any
-questions or run into any issues.
+questions, or run into any issues.
 
 License
 =======

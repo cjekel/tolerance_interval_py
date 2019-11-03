@@ -85,7 +85,7 @@ Changes will be stored in [CHANGELOG.md](https://github.com/cjekel/tolerance_int
 
 # Contributing
 
-All contributions are welcome! Please let me know if you have any questions or run into any issues.
+All contributions are welcome! Please let me know if you have any questions, or run into any issues.
 
 # License
 
