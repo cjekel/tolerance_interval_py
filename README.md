@@ -4,24 +4,6 @@
 
 A small Python library for one-sided tolerance bounds and two-sided tolerance intervals.
 
-# Requirements
-
-```Python
-"numpy >= 1.14.0"
-"scipy >= 0.19.0"
-"sympy >= 1.4"
-```
-# Installation
-
-```
-git clone https://github.com/cjekel/tolerance_interval_py
-[sudo] python -m pip install ./tolerance_interval_py
-```
-
-# Changelog
-
-Version 0.0.1 right now. When this is released on PyPi changes will be stored in [CHANGELOG.md](https://github.com/cjekel/tolerance_interval_py/blob/master/CHANGELOG.md).
-
 # Methods
 
 This is what has been implemented so far:
@@ -36,6 +18,20 @@ This is what has been implemented so far:
 - non_parametric
 - hanson_koopmans
 - hanson_koopmans_cmh
+
+# Requirements
+
+```Python
+"numpy >= 1.14.0"
+"scipy >= 0.19.0"
+"sympy >= 1.4"
+```
+# Installation
+
+```
+git clone https://github.com/cjekel/tolerance_interval_py
+[sudo] python -m pip install ./tolerance_interval_py
+```
 
 # Examples
 
@@ -72,6 +68,10 @@ bound = ti.oneside.non_parametric(x, 0.95, 0.9)
 # here bound will print for each set of n=500 samples 
 print('Bounds:', bound)
 ```
+
+# Changelog
+
+Version 0.0.1 right now. When this is released on PyPi changes will be stored in [CHANGELOG.md](https://github.com/cjekel/tolerance_interval_py/blob/master/CHANGELOG.md).
 
 # Contributing
 
