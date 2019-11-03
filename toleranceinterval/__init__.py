@@ -8,6 +8,7 @@
 # from . import oneside
 # from . import oneside
 from . import oneside
+from . import twoside
 from . import hk
 from . import checks
 import os as _os  # noqa F401

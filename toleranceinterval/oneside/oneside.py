@@ -48,8 +48,8 @@ def normal(x, p, g):
 
     Returns
     -------
-    float
-        The normal distribution toleranace interval bound.
+    ndarray (1-D)
+        The normal distribution toleranace bound.
 
     References
     ----------
@@ -114,7 +114,7 @@ def non_parametric(x, p, g):
 
     Returns
     -------
-    float
+    ndarray (1-D)
         The non-parametric toleranace interval bound. Returns np.nan if a
         non-parametric tolerance interval does not exist for the combination
         of percentile, confidence level, and number of samples.
