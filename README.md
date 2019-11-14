@@ -29,6 +29,7 @@ Checkout the [documentation](https://jekel.me/tolerance_interval_py/index.html).
 "numpy >= 1.14.0"
 "scipy >= 0.19.0"
 "sympy >= 1.4"
+"setuptools >= 38.6.0"
 ```
 # Installation
 
