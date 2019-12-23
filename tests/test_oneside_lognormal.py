@@ -81,7 +81,7 @@ class TestEverything(unittest.TestCase):
                 g = self.G[j]
                 bound = lognormal(x, p, g)
                 k_hat = (xmu - np.log(bound))/xstd
-                self.assertTrue(np.isclose(k, k_hat[0], rtol=1e-3, atol=1e-4))
+                self.assertTrue(np.isclose(k, k_hat[0], rtol=1e-2, atol=1e-3))
 
     def test_random_shapes(self):
         M = [3, 10, 20]
