@@ -3,6 +3,8 @@ import numpy as np
 from toleranceinterval.oneside import lognormal
 import unittest
 
+np.random.seed(1212)
+
 
 class TestEverything(unittest.TestCase):
 
