@@ -64,7 +64,7 @@ Estimate the central 90th percentile to 95% confidence, of a random sample ```x`
 import numpy as np
 import toleranceinterval as ti
 x = np.random.random(100)
-bound = ti.twoside.normal(x, 0.1, 0.95)
+bound = ti.twoside.normal(x, 0.9, 0.95)
 print('Lower bound:', bound[:, 0])
 print('Upper bound:', bound[:, 1])
 ```

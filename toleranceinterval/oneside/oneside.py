@@ -73,7 +73,7 @@ def normal(x, p, g):
     Estimate the 90th percentile upper bound with 95% confidence of the
     following 100 random samples from a normal distribution.
 
-    >>> ub = ti.oneside.normal(x, 0.1, 0.95)
+    >>> ub = ti.oneside.normal(x, 0.9, 0.95)
 
     """
     x = numpy_array(x)  # check if numpy array, if not make numpy array
@@ -129,7 +129,7 @@ def lognormal(x, p, g):
     Estimate the 90th percentile upper bound with 95% confidence of the
     following 100 random samples from a lognormal distribution.
 
-    >>> ub = ti.oneside.lognormal(x, 0.1, 0.95)
+    >>> ub = ti.oneside.lognormal(x, 0.9, 0.95)
 
     """
     x = numpy_array(x)  # check if numpy array, if not make numpy array

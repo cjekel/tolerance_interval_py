@@ -70,14 +70,14 @@ def normal(x, p, g):
     >>> import numpy as np
     >>> import toleranceinterval as ti
     >>> x = np.random.nomral(100)
-    >>> bound = ti.twoside.normal(x, 0.1, 0.95)
+    >>> bound = ti.twoside.normal(x, 0.9, 0.95)
     >>> print('Lower bound:', bound[:, 0])
     >>> print('Upper bound:', bound[:, 1])
 
     Estimate the 95th percentile central TI with 95% confidence of the
     following 100 random samples from a normal distribution.
 
-    >>> bound = ti.twoside.normal(x, 0.1, 0.95)
+    >>> bound = ti.twoside.normal(x, 0.95, 0.95)
 
     """
     x = numpy_array(x)  # check if numpy array, if not make numpy array
@@ -131,14 +131,14 @@ def lognormal(x, p, g):
     >>> import numpy as np
     >>> import toleranceinterval as ti
     >>> x = np.random.random(100)
-    >>> bound = ti.twoside.lognormal(x, 0.1, 0.95)
+    >>> bound = ti.twoside.lognormal(x, 0.9, 0.95)
     >>> print('Lower bound:', bound[:, 0])
     >>> print('Upper bound:', bound[:, 1])
 
     Estimate the 95th percentile central TI with 95% confidence of the
     following 100 random samples from a normal distribution.
 
-    >>> bound = ti.twoside.lognormal(x, 0.1, 0.95)
+    >>> bound = ti.twoside.lognormal(x, 0.95, 0.95)
 
     """
     x = numpy_array(x)  # check if numpy array, if not make numpy array
