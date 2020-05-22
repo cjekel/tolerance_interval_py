@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.0.3] - 2020-05-22
 ### Changed
-- Docstrings, documenation, and readme had the wrong percentile values for many examples. I've corrected these examples.
+- Docstrings, documenation, and readme had the wrong percentile values for many examples. I've corrected these examples. Sorry for the confusion this may have caused.
 
 ## [0.0.2] - 2019-11-13
 ### Added
