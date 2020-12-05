@@ -31,7 +31,7 @@ jobs:
         flake8 toleranceinterval
     - name: Test with pytest
       run: |
-        pytest --cov=toleranceinterval --cov-report=xml -p no:warnings tests/tests.py
+        pytest --cov=toleranceinterval --cov-report=xml -p no:warnings
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
       with:
