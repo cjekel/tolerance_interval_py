@@ -3,8 +3,8 @@ name: toleranceinterval ci
 on:
   push:
   schedule:
-    # Also run every 24 hours
-    - cron:  '* */23 * * *'
+    # Run tests every saturday
+    - cron:  '* * * * */6'
 
 jobs:
   build:
