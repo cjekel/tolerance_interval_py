@@ -1,0 +1,15 @@
+# Simple environment for developing tolerance_interval_py
+# To use:
+#   $ conda env create -f environment.yml  # `mamba` works too for this command
+#   $ conda activate tolerance-interval-py
+#
+name: tolerance-interval-py
+channels:
+  - conda-forge
+dependencies:
+  - numpy
+  - scipy
+  - sympy
+  - setuptools
+  # Avoid pulling in large MKL libraries.
+  - nomkl
