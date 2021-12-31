@@ -7,7 +7,7 @@ import unittest
 
 class TestEverything(unittest.TestCase):
 
-    def test_nist_approx(self):
+    def test_guenther_approx(self):
         # values from:
         # https://ncss-wpengine.netdna-ssl.com/wp-content/themes/ncss/pdf/Procedures/PASS/Tolerance_Intervals_for_Normal_Data.pdf
         G = [0.9, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95,
@@ -18,14 +18,14 @@ class TestEverything(unittest.TestCase):
              1.6948, 1.6703, 1.7138, 1.8084]
         for i, k in enumerate(K):
             n = N[i]
-            x = np.random.random(n)*10
+            x = np.random.random(n) * 10
             xmu = np.mean(np.log(x))
             xstd = np.std(np.log(x), ddof=1)
             p = P[i]
             g = G[i]
-            bound = lognormal(x, p, g)
-            k_hat_l = (xmu - np.log(bound[0, 0]))/xstd
-            k_hat_u = (np.log(bound[0, 1]) - xmu)/xstd
+            bound = lognormal(x, p, g, method='guenther')
+            k_hat_l = (xmu - np.log(bound[0, 0])) / xstd
+            k_hat_u = (np.log(bound[0, 1]) - xmu) / xstd
             self.assertTrue(np.isclose(k, k_hat_l, rtol=1e-4, atol=1e-5))
             self.assertTrue(np.isclose(k, k_hat_u, rtol=1e-4, atol=1e-5))
 
