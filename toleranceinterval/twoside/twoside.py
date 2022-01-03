@@ -126,28 +126,35 @@ def normal_factor(n, p, g, method=None, m=None, nu=None, d2=None,
 
     References
     ----------
-    .. [1] Krishnamoorthy K, Mathew T. (2009). Statistical Tolerance Regions:
+    [1] Krishnamoorthy K, Mathew T. (2009). Statistical Tolerance Regions:
         Theory, Applications, and Computation. John Wiley & Sons, Inc.,
         Hoboken, New Jersey. ISBN: 978-0-470-38026-0, 512 pages.
-    .. [2] Witkovsky V. On the exact two-sided tolerance intervals for
+
+    [2] Witkovsky V. On the exact two-sided tolerance intervals for
         univariate normal distribution and linear regression. Austrian
-        Journal of Statistics 43(4), 2014, 279-92. http://
-        ajs.data-analysis.at/index.php/ajs/article/viewFile/vol43-4-6/35
-    .. [3] ISO 16269-6:2014: Statistical interpretation of data - Part 6:
+        Journal of Statistics 43(4), 2014, 279-92.
+        http://ajs.data-analysis.at/index.php/ajs/article/viewFile/vol43-4-6/35
+
+    [3] ISO 16269-6:2014: Statistical interpretation of data - Part 6:
         Determination of statistical tolerance intervals.
-    .. [4] Janiga I., Garaj I.: Two-sided tolerance limits of normal
+
+    [4] Janiga I., Garaj I.: Two-sided tolerance limits of normal
         distributions with unknown means and unknown common variability.
         MEASUREMENT SCIENCE REVIEW, Volume 3, Section 1, 2003, 75-78.
-    .. [5] Howe, W. G. “Two-Sided Tolerance Limits for Normal Populations,
+
+    [5] Howe, W. G. “Two-Sided Tolerance Limits for Normal Populations,
         Some Improvements.” Journal of the American Statistical Association,
         vol. 64, no. 326, [American Statistical Association, Taylor & Francis,
         Ltd.], 1969, pp. 610–20, https://doi.org/10.2307/2283644.
-    .. [6] Guenther, W. C. (1977). "Sampling Inspection in Statistical Quality
+
+    [6] Guenther, W. C. (1977). "Sampling Inspection in Statistical Quality
         Control",, Griffin's Statistical Monographs, Number 37, London.
-    .. [7] Robert W. Mee (1990) Simultaneous Tolerance Intervals for Normal
+
+    [7] Robert W. Mee (1990) Simultaneous Tolerance Intervals for Normal
         Populations With Common Variance, Technometrics, 32:1, 83-92,
         DOI: 10.1080/00401706.1990.10484595
-    .. [8] K. Krishnamoorthy & Saptarshi Chakraberty (2022). Construction of
+
+    [8] K. Krishnamoorthy & Saptarshi Chakraberty (2022). Construction of
         simultaneous tolerance intervals for several normal distributions,
         Journal of Statistical Computation and Simulation, 92:1, 101-114,
         DOI: 10.1080/00949655.2021.1932885
