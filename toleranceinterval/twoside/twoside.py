@@ -73,8 +73,8 @@ def normal_factor(n, p, g, method=None, m=None, nu=None, d2=None,
     with nu degrees of freedom, nu = m * (n-1). For the 'exact' method, both
     the simultaneous and non-simultaneous cases can be considered.
 
-    Standard Parameters
-    -------------------
+    Parameters
+    ----------
     n : scalar
         Sample size
     p : scalar in the interval [0.0, 1.0]
@@ -86,18 +86,12 @@ def normal_factor(n, p, g, method=None, m=None, nu=None, d2=None,
     method : str
         Method to use for computing the factor. Available methods are 'exact',
         'howe', and 'guenther'. If None, the default method is 'exact'.
-
-    Optional Parameters for Pooled Variance Studies
-    -----------------------------------------------
     m : scalar
         Number of independent random samples (of size n). If None,
         default value is m = 1.
     nu : scalar
         Degrees of freedom for distribution of the (pooled) sample
         variance S2. If None, default value is nu = m*(n-1).
-
-    Advanced Optional Parameters Available for 'exact' Method
-    ---------------------------------------------------------
     d2 : scalar
         Normalizing constant. For computing the factors of the
         non-simultaneous tolerance limits (xx'*betaHat +/- k * S)
@@ -198,8 +192,8 @@ def normal(x, p, g, method=None, pool_variance=False):
     implemented: the 'howe' method, and the 'guenther' method. See the
     documentation for normal_factor for more details on the methods.
 
-    Standard Parameters
-    -------------------
+    Parameters
+    ----------
     x : ndarray (1-D, or 2-D)
         Numpy array of samples to compute the tolerance interval. Assumed data
         type is np.float. Shape of (m, n) is assumed for 2-D arrays with m
@@ -211,9 +205,6 @@ def normal(x, p, g, method=None, pool_variance=False):
     method : str
         Method to use for computing the TI. Available methods are 'exact',
         'howe', and 'guenther'. If None, the default method is 'exact'.
-
-    Optional Parameters for Pooled Variance Studies
-    -----------------------------------------------
     pool_variance : boolean
         Consider the m random samples to share the same variance such that
         the degrees of freedom are nu = m*(n-1). Default is False.
@@ -286,9 +277,6 @@ def lognormal(x, p, g, method=None, pool_variance=False):
     method : str
         Method to use for computing the TI. Available methods are 'exact',
         'howe', and 'guenther'. If None, the default method is 'exact'.
-
-    Optional Parameters for Pooled Variance Studies
-    -----------------------------------------------
     pool_variance : boolean
         Consider the m random samples to share the same variance such that
         the degrees of freedom are nu = m*(n-1). Default is False.
