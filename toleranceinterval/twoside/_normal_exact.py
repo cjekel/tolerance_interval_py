@@ -124,11 +124,11 @@ def tolerance_factor(n, coverage, confidence, m=None, nu=None, d2=None,
     tailprob : boolean
         Logical flag for representing the input probabilities
         'coverage' and 'confidence'. If True, the input parameters are
-        represented as the tail coverage (i.e. 1 - coverage) and tail confidence
-        (i.e. 1 - confidence). This option is useful if the interest is to
-        calculate the tolerance factor for extremely large values
-        of coverage and/or confidence, close to 1, as e.g. coverage = 1 - 1e-18.
-        Default value is False.
+        represented as the tail coverage (i.e. 1 - coverage) and tail
+        confidence (i.e. 1 - confidence). This option is useful if the
+        interest is to calculate the tolerance factor for extremely large
+        values of coverage and/or confidence, close to 1, as e.g.
+        coverage = 1 - 1e-18. Default value is False.
 
     Returns
     -------

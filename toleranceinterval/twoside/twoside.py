@@ -116,8 +116,8 @@ def normal_factor(n, p, g, method=None, m=None, nu=None, d2=None,
         represented as the tail coverage (i.e. 1 - p) and tail confidence
         (i.e. 1 - g). This option is useful if the interest is to
         calculate the tolerance factor for extremely large values
-        of coverage and/or confidence, close to 1, as e.g. coverage = 1 - 1e-18.
-        Default value is False.
+        of coverage and/or confidence, close to 1, as
+        e.g. coverage = 1 - 1e-18. Default value is False.
 
     Returns
     -------
@@ -183,9 +183,9 @@ def normal(x, p, g, method=None, pool_variance=False):
     Compute two-sided central tolerance interval using the normal distribution.
 
     Computes the two-sided tolerance interval (TI) to cover a proportion p of
-    the population with confidence g using the normal distribution. This follows
-    the standard approach to calculate the interval as a factor of sample
-    standard deviations away from the sample mean.
+    the population with confidence g using the normal distribution. This
+    follows the standard approach to calculate the interval as a factor of
+    sample standard deviations away from the sample mean.
 
         TI = [Xmean - k * S, Xmean + k * S]
 
