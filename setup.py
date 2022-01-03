@@ -19,5 +19,6 @@ setup(
         "scipy >= 0.19.0",
         "sympy >= 1.4",
         "setuptools >= 38.6.0",
-    ]
+    ],
+    python_requires=">3.5",
 )
