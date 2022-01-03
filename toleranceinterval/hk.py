@@ -79,12 +79,14 @@ class HansonKoopmans(object):
 
         References
         ----------
-        .. [1] Hanson, D. L., & Koopmans, L. H. (1964). Tolerance Limits for
+        [1] Hanson, D. L., & Koopmans, L. H. (1964). Tolerance Limits for
             the Class of Distributions with Increasing Hazard Rates. Ann. Math.
             Statist., 35(4), 1561–1570. https://doi.org/10.1214/aoms/1177700380
-        .. [2] Vangel, M. G. (1994). One-sided nonparametric tolerance limits.
+
+        [2] Vangel, M. G. (1994). One-sided nonparametric tolerance limits.
             Communications in Statistics - Simulation and Computation, 23(4),
             1137–1154. https://doi.org/10.1080/03610919408813222
+
         """
         self.max_iter = max_iter
         self.tol = tol

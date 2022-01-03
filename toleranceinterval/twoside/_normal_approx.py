@@ -61,7 +61,7 @@ def tolerance_factor_howe(n, p, g, m=None, nu=None):
 
     References
     ----------
-    .. [1] Howe, W. G. (1969). "Two-sided Tolerance Limits for Normal
+    [1] Howe, W. G. (1969). "Two-sided Tolerance Limits for Normal
         Populations - Some Improvements", Journal of the American Statistical
         Association, 64 , pages 610-620.
 
@@ -112,7 +112,7 @@ def tolerance_factor_guenther(n, p, g, m=None, nu=None):
 
     References
     ----------
-    .. [1] Guenther, W. C. (1977). "Sampling Inspection in Statistical Quality
+    [1] Guenther, W. C. (1977). "Sampling Inspection in Statistical Quality
         Control", Griffin's Statistical Monographs, Number 37, London.
 
     """

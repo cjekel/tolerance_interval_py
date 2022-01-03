@@ -124,11 +124,11 @@ def tolerance_factor(n, coverage, confidence, m=None, nu=None, d2=None,
     tailprob : boolean
         Logical flag for representing the input probabilities
         'coverage' and 'confidence'. If True, the input parameters are
-        represented as the tail coverage (i.e. 1 - coverage) and tail confidence
-        (i.e. 1 - confidence). This option is useful if the interest is to
-        calculate the tolerance factor for extremely large values
-        of coverage and/or confidence, close to 1, as e.g. coverage = 1 - 1e-18.
-        Default value is False.
+        represented as the tail coverage (i.e. 1 - coverage) and tail
+        confidence (i.e. 1 - confidence). This option is useful if the
+        interest is to calculate the tolerance factor for extremely large
+        values of coverage and/or confidence, close to 1, as e.g.
+        coverage = 1 - 1e-18. Default value is False.
 
     Returns
     -------
@@ -140,15 +140,19 @@ def tolerance_factor(n, coverage, confidence, m=None, nu=None, d2=None,
     [1] Krishnamoorthy K, Mathew T. (2009). Statistical Tolerance Regions:
         Theory, Applications, and Computation. John Wiley & Sons, Inc.,
         Hoboken, New Jersey. ISBN: 978-0-470-38026-0, 512 pages.
+
     [2] Witkovsky V. On the exact two-sided tolerance intervals for
         univariate normal distribution and linear regression. Austrian
-        Journal of Statistics 43(4), 2014, 279-92. http://
-        ajs.data-analysis.at/index.php/ajs/article/viewFile/vol43-4-6/35
+        Journal of Statistics 43(4), 2014, 279-92.
+        http://ajs.data-analysis.at/index.php/ajs/article/viewFile/vol43-4-6/35
+
     [3] ISO 16269-6:2014: Statistical interpretation of data - Part 6:
         Determination of statistical tolerance intervals.
+
     [4] Janiga I., Garaj I.: Two-sided tolerance limits of normal
         distributions with unknown means and unknown common variability.
         MEASUREMENT SCIENCE REVIEW, Volume 3, Section 1, 2003, 75-78.
+
     [5] Robert W. Mee (1990) Simultaneous Tolerance Intervals for Normal
         Populations With Common Variance, Technometrics, 32:1, 83-92,
         DOI: 10.1080/00401706.1990.10484595

@@ -53,10 +53,11 @@ def normal(x, p, g):
 
     References
     ----------
-    .. [1] Young, D. S. (2010). tolerance: An R Package for Estimating
+    [1] Young, D. S. (2010). tolerance: An R Package for Estimating
         Tolerance Intervals. Journal of Statistical Software; Vol 1, Issue 5
         (2010). Retrieved from http://dx.doi.org/10.18637/jss.v036.i05
-    .. [2] Montgomery, D. C., & Runger, G. C. (2018). Chapter 8. Statistical
+
+    [2] Montgomery, D. C., & Runger, G. C. (2018). Chapter 8. Statistical
         Intervals for a Single Sample. In Applied Statistics and Probability
         for Engineers, 7th Edition.
 
@@ -170,10 +171,11 @@ def non_parametric(x, p, g):
 
     References
     ----------
-    .. [1] Hong, L. J., Huang, Z., & Lam, H. (2017). Learning-based robust
+    [1] Hong, L. J., Huang, Z., & Lam, H. (2017). Learning-based robust
         optimization: Procedures and statistical guarantees. ArXiv Preprint
         ArXiv:1704.04342.
-    .. [2] 9.5.5.3 Nonparametric Procedure. (2017). In MMPDS-12 : Metallic
+
+    [2] 9.5.5.3 Nonparametric Procedure. (2017). In MMPDS-12 : Metallic
         materials properties development and standardization. Battelle
         Memorial Institute.
 
@@ -269,7 +271,7 @@ def hanson_koopmans(x, p, g, j=-1, method='secant', max_iter=200, tol=1e-5,
 
     References
     ----------
-    .. [1] Hanson, D. L., & Koopmans, L. H. (1964). Tolerance Limits for
+    [1] Hanson, D. L., & Koopmans, L. H. (1964). Tolerance Limits for
         the Class of Distributions with Increasing Hazard Rates. Ann. Math.
         Statist., 35(4), 1561-1570. https://doi.org/10.1214/aoms/1177700380
 
@@ -375,10 +377,11 @@ def hanson_koopmans_cmh(x, p, g, j=-1, method='secant', max_iter=200, tol=1e-5,
 
     References
     ----------
-    .. [1] Hanson, D. L., & Koopmans, L. H. (1964). Tolerance Limits for
+    [1] Hanson, D. L., & Koopmans, L. H. (1964). Tolerance Limits for
         the Class of Distributions with Increasing Hazard Rates. Ann. Math.
         Statist., 35(4), 1561-1570. https://doi.org/10.1214/aoms/1177700380
-    .. [2] Volume 1: Guidelines for Characterization of Structural Materials.
+
+    [2] Volume 1: Guidelines for Characterization of Structural Materials.
         (2017). In Composite Materials Handbook. SAE International.
 
     Examples
