@@ -13,6 +13,7 @@ Checkout the [documentation](https://jekel.me/tolerance_interval_py/index.html).
 ## twoside
 
 - normal
+- normal_factor
 - lognormal
 
 ## oneside
