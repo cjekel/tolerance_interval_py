@@ -187,12 +187,12 @@ def non_parametric(x, p, g):
     >>> import numpy as np
     >>> import toleranceinterval as ti
     >>> x = np.random.random(300)
-    >>> bound = ti.oneside.normal(x, 0.1, 0.95)
+    >>> bound = ti.oneside.non_parametric(x, 0.1, 0.95)
 
     Estimate the 90th percentile bound with 95% confidence of the
     following 300 random samples from a normal distribution.
 
-    >>> bound = ti.oneside.normal(x, 0.9, 0.95)
+    >>> bound = ti.oneside.non_parametric(x, 0.9, 0.95)
 
     """
     x = numpy_array(x)  # check if numpy array, if not make numpy array
