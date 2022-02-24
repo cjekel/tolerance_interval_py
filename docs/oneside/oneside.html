@@ -215,12 +215,12 @@ def non_parametric(x, p, g):
     &gt;&gt;&gt; import numpy as np
     &gt;&gt;&gt; import toleranceinterval as ti
     &gt;&gt;&gt; x = np.random.random(300)
-    &gt;&gt;&gt; bound = ti.oneside.normal(x, 0.1, 0.95)
+    &gt;&gt;&gt; bound = ti.oneside.non_parametric(x, 0.1, 0.95)
 
     Estimate the 90th percentile bound with 95% confidence of the
     following 300 random samples from a normal distribution.
 
-    &gt;&gt;&gt; bound = ti.oneside.normal(x, 0.9, 0.95)
+    &gt;&gt;&gt; bound = ti.oneside.non_parametric(x, 0.9, 0.95)
 
     &#34;&#34;&#34;
     x = numpy_array(x)  # check if numpy array, if not make numpy array
@@ -923,11 +923,11 @@ following 300 random samples from a normal distribution.</p>
 <pre><code class="language-python-repl">&gt;&gt;&gt; import numpy as np
 &gt;&gt;&gt; import toleranceinterval as ti
 &gt;&gt;&gt; x = np.random.random(300)
-&gt;&gt;&gt; bound = ti.oneside.normal(x, 0.1, 0.95)
+&gt;&gt;&gt; bound = ti.oneside.non_parametric(x, 0.1, 0.95)
 </code></pre>
 <p>Estimate the 90th percentile bound with 95% confidence of the
 following 300 random samples from a normal distribution.</p>
-<pre><code class="language-python-repl">&gt;&gt;&gt; bound = ti.oneside.normal(x, 0.9, 0.95)
+<pre><code class="language-python-repl">&gt;&gt;&gt; bound = ti.oneside.non_parametric(x, 0.9, 0.95)
 </code></pre></div>
 <details class="source">
 <summary>
@@ -982,12 +982,12 @@ following 300 random samples from a normal distribution.</p>
     &gt;&gt;&gt; import numpy as np
     &gt;&gt;&gt; import toleranceinterval as ti
     &gt;&gt;&gt; x = np.random.random(300)
-    &gt;&gt;&gt; bound = ti.oneside.normal(x, 0.1, 0.95)
+    &gt;&gt;&gt; bound = ti.oneside.non_parametric(x, 0.1, 0.95)
 
     Estimate the 90th percentile bound with 95% confidence of the
     following 300 random samples from a normal distribution.
 
-    &gt;&gt;&gt; bound = ti.oneside.normal(x, 0.9, 0.95)
+    &gt;&gt;&gt; bound = ti.oneside.non_parametric(x, 0.9, 0.95)
 
     &#34;&#34;&#34;
     x = numpy_array(x)  # check if numpy array, if not make numpy array
