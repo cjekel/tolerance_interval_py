@@ -201,7 +201,7 @@ def tolerance_factor(n, coverage, confidence, m=None, nu=None, d2=None,
 
     # Handle the case of nu not being positive.
     if nu <= 0:
-        raise(ValueError, 'Degrees of freedom should be positive.')
+        raise (ValueError, 'Degrees of freedom should be positive.')
 
     # Compute the two-sided tolerance factor
     tol_high_precision = np.spacing(tailconfidence)

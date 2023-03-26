@@ -94,16 +94,16 @@ class HansonKoopmans(object):
         # create a dummy variable v
         self.v = Symbol('v', nonzero=True, rational=True, positive=True)
         # check that p, g, n, j are valid
-        if not(p < 0.5 and p > 0.):
+        if not (p < 0.5 and p > 0.):
             self.invalid_value(p, 'p')
         else:
             self.p = p
-        if not(g > 0. and g < 1.):
+        if not (g > 0. and g < 1.):
             self.invalid_value(g, 'g')
         else:
             self.g = g
         self.n = int(n)
-        if not(j < n and j > -1):
+        if not (j < n and j > -1):
             self.invalid_value(j, 'j')
         else:
             self.j = int(j)
