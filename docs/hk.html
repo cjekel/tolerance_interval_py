@@ -122,16 +122,16 @@ class HansonKoopmans(object):
         # create a dummy variable v
         self.v = Symbol(&#39;v&#39;, nonzero=True, rational=True, positive=True)
         # check that p, g, n, j are valid
-        if not(p &lt; 0.5 and p &gt; 0.):
+        if not (p &lt; 0.5 and p &gt; 0.):
             self.invalid_value(p, &#39;p&#39;)
         else:
             self.p = p
-        if not(g &gt; 0. and g &lt; 1.):
+        if not (g &gt; 0. and g &lt; 1.):
             self.invalid_value(g, &#39;g&#39;)
         else:
             self.g = g
         self.n = int(n)
-        if not(j &lt; n and j &gt; -1):
+        if not (j &lt; n and j &gt; -1):
             self.invalid_value(j, &#39;j&#39;)
         else:
             self.j = int(j)
@@ -439,16 +439,16 @@ Communications in Statistics - Simulation and Computation, 23(4),
         # create a dummy variable v
         self.v = Symbol(&#39;v&#39;, nonzero=True, rational=True, positive=True)
         # check that p, g, n, j are valid
-        if not(p &lt; 0.5 and p &gt; 0.):
+        if not (p &lt; 0.5 and p &gt; 0.):
             self.invalid_value(p, &#39;p&#39;)
         else:
             self.p = p
-        if not(g &gt; 0. and g &lt; 1.):
+        if not (g &gt; 0. and g &lt; 1.):
             self.invalid_value(g, &#39;g&#39;)
         else:
             self.g = g
         self.n = int(n)
-        if not(j &lt; n and j &gt; -1):
+        if not (j &lt; n and j &gt; -1):
             self.invalid_value(j, &#39;j&#39;)
         else:
             self.j = int(j)

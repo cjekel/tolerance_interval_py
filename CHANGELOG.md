@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.3] - 2023-03-26
+### Changed
+- Fixed a bug introduced in `1.0.2` where `checks.assert_2d_sort` was not sorting
+
 ## [1.0.2] - 2023-03-25
 ### Changed
 - Fixed a bug where a sort function was modifying the input data array. This could have unintended consequence for a user without their knowledge. See [PR](https://github.com/cjekel/tolerance_interval_py/pull/7). Thanks to Jed Ludlow](https://github.com/jedludlow)
