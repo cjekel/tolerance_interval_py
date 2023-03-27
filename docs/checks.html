@@ -64,7 +64,8 @@ def assert_2d_sort(x):
     elif x.ndim &gt; 2:
         raise ValueError(&#39;x can not be more than 2 dimensions&#39;)
     # Prevent modifications to input data by copying x before sorting.
-    x.copy().sort()
+    x = x.copy()
+    x.sort()
     return x</code></pre>
 </details>
 </section>
@@ -90,7 +91,8 @@ def assert_2d_sort(x):
     elif x.ndim &gt; 2:
         raise ValueError(&#39;x can not be more than 2 dimensions&#39;)
     # Prevent modifications to input data by copying x before sorting.
-    x.copy().sort()
+    x = x.copy()
+    x.sort()
     return x</code></pre>
 </details>
 </dd>

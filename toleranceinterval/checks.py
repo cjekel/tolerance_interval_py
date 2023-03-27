@@ -36,5 +36,6 @@ def assert_2d_sort(x):
     elif x.ndim > 2:
         raise ValueError('x can not be more than 2 dimensions')
     # Prevent modifications to input data by copying x before sorting.
-    x.copy().sort()
+    x = x.copy()
+    x.sort()
     return x
